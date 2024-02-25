@@ -1,0 +1,450 @@
+h3 {
+    background-color: black;
+    font-size: 40px;
+}
+
+.p-3 {
+    margin: auto;
+}
+html{
+    scrollbar-width: thin;
+    scrollbar-color: #3d3d3e  rgb(40, 40, 40);
+}
+body {
+    background-color: rgb(0, 0, 0);
+    /* Dark background color */
+    color: #ffffff;
+    /* Light text color */
+    font-family: 'Montserrat', sans-serif;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #3d3d3e  rgb(40, 40, 40);
+}
+
+/* 
+
+for home page
+
+ */
+
+.content {
+    display: flex;
+    justify-content: center;
+
+}
+/* left side section */
+.left-sidebar {
+    background-color: rgb(40, 40, 40);
+
+    flex: 0 0 auto;
+    padding: 20px;
+    height:fit-content;
+    /* overflow:inherit; */
+    color: #ffffff;
+    max-width: 200px;
+    border-radius: 7px;
+
+}
+/* .sidebar-options{
+
+} */
+.sidebar-item {
+    padding: 10px 15px;
+    color: #fff;
+    font-size:15px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.sidebar-item i {
+    margin-right: 10px;
+}
+
+.sidebar-item:hover {
+    background-color: #444; /* Darker grey background color on hover */
+}
+
+.sidebar-divider {
+    height: 1px;
+    background-color: #555; /* Darker grey horizontal line */
+    margin: 10px 0;
+}
+
+.sidebar-heading {
+    color: #aaa; /* Lighter grey color for headings */
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.sidebar-search {
+    padding: 0px 0px 10px; /*Add padding to the top and bottom */
+    border-bottom: 1px solid #555; /* Add bottom border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    background-color: #444; /* Dark grey background color */
+    color: #fff; /* Text color */
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+.search-input:focus {
+    background-color: #555; /* Darker grey background color on focus */
+}
+
+
+/* right sidebar section */
+.right-sidebar {
+    background-color: rgb(40, 40, 40);
+    flex: 0 0 auto;
+    padding: 20px;
+    height: fit-content;
+    overflow-y: auto;
+    color: #ffffff;
+
+    min-width: 220px;
+    border-radius: 7px;
+
+
+}
+
+.stories-section{
+    height: 300px;
+    overflow-y:scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #3d3d3e  rgb(40, 40, 40);
+    /* scrollbar-gutter: stable; */
+}
+
+
+.stories-element {
+    display: flex;
+    align-items: center;
+
+    padding: 0 px 0px;
+}
+.stories-element p {
+
+    font-size: 12px;
+    color: rgb(186, 183, 183);
+}
+
+.stories-element h6 {
+
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.center-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.aok-card-section {
+    overflow-y: scroll;
+    display: flex;
+    
+   
+    background-color: rgb(40, 40, 40);
+    /* Dark background color */
+    border-radius: 10px;
+    height: 180px;
+    width: auto;
+    margin-bottom: 15px;
+    scrollbar-width: none;
+    
+}
+
+.story-container {
+    position: relative;
+    min-width: 100px;
+    max-width: 100px;
+    /* Adjust the size as needed */
+    height: 150px;
+    /* Adjust the size as needed */
+    overflow: hidden;
+    margin: 10px;
+    /* Add some spacing between examples */
+   
+    border-radius: 10px;
+    box-shadow: inset 0 20px 40px -10px rgba(0, 0, 0, 0.5),
+        inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);
+
+}
+.profile-picture {
+    position: absolute;
+    top: 10px;
+    /* Adjust the distance from the top */
+    left: 30px;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid #c676ed;
+    /* Light purple color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow to profile picture */
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+
+}
+
+
+.username {
+    position: absolute;
+    bottom: 10px;
+    /* Adjust the distance from the bottom */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    /* White color for text */
+    text-shadow: #3d3d3e;
+    /* Add a shadow effect */
+}
+
+
+
+
+/* for post form */
+
+/* .form-control-file{
+    display: none;
+}
+.postlabel{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: grey;
+    font-size: 25px;
+    height: 150px;
+    width: 500px;
+    border-radius: 30px;
+    border: 2px dashed grey;
+}
+.postlabel:hover{
+    border: 2px dashed white;
+    color: white;
+
+} */
+
+
+
+/* for post UI
+    it is under component/post.php
+
+    it just for post that is viewed by user
+*/
+
+
+
+.post-container {
+    background-color: #252525;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    border: 1px solid #4d4d4d;
+    /* padding: 20px; */
+}
+.post-container:hover {
+    border: 1px solid #7c7c7c
+
+}
+
+.media {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 500px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 1rem 3rem 0;
+}
+
+
+.like-btn i {
+    color: #fff;
+    cursor: pointer;
+}
+
+.like-btn {
+    /* padding-left: 10px; */
+    display: flex;
+    align-items: baseline;
+    border-radius: 40px;
+
+}
+
+.count-number {
+    font-size: 15px;
+    padding: 2px 8px;
+
+}
+
+
+.like-btn.active i {
+    color: rgb(41, 124, 249);
+}
+
+.like-btn.active .action-word {
+    color: rgb(41, 124, 249);
+}
+
+.like-btn.active .count-number {
+    background-color: rgb(41, 124, 249);
+    border-radius: 30px;
+
+    /* font-weight: bold; */
+}
+
+.comment-btn {
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+}
+
+
+.post-info {
+    display: flex;
+    align-items: center;
+
+    padding: 10px 15px 0px;
+}
+
+.post-info p {
+
+    font-size: 12px;
+    color: rgb(186, 183, 183);
+}
+
+.post-info h6 {
+
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.caption {
+    color: rgb(255, 255, 255);
+    padding: 5px 20px;
+    /* margin: 0; */
+}
+
+.caption p {
+    margin: 0;
+}
+
+hr {
+    margin: 5px 10px;
+    border: 0.5px solid rgb(79, 78, 78);
+}
+
+.total_likes {
+    margin: 5px 10px 5px;
+    font-size: 13px;
+}
+
+.comment-section {
+    margin: 10px 20px;
+    padding-bottom: 10px;
+}
+
+.add-comment {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.comment-form {
+    width: 100%;
+    background-color: rgba(79, 78, 78, 0.491);
+    border-radius: 40px;
+    margin: 5px 10px;
+
+
+}
+
+.comment-form p {
+    margin: 10px 15px;
+}
+
+.comment {
+    margin: 10px 20px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.comment span {
+
+    color: rgb(198, 194, 194);
+}
+
+.comment-header {
+    font-size: 15px;
+    font-weight: lighter;
+    margin: 10px 0;
+}
+
+.view-all-comment {
+    margin: o auto;
+    padding: 10px 0;
+    color: rgb(87, 143, 228);
+
+}
+
+
+
+/** for loading animation css  */
+
+@keyframes ldio-rwa0xznz7l {
+    0% { transform: rotate(0deg) }
+    50% { transform: rotate(180deg) }
+    100% { transform: rotate(360deg) }
+  }
+  .ldio-rwa0xznz7l div {
+    position: absolute;
+    animation: ldio-rwa0xznz7l 1.07s linear infinite;
+    width: 67.58px;
+    height: 67.58px;
+    top: 20.71px;
+    left: 20.71px;
+    border-radius: 50%;
+    box-shadow: 0 0.9810000000000001px 0 0 #949196;
+    transform-origin: 33.79px 34.2805px;
+  }
+  .loadingio-spinner-eclipse-f5f99z8brf4 {
+    width: 109px;
+    height: 109px;
+    /* display: inline-block; */
+    overflow: hidden;
+    background: none;
+    margin: 0 auto;
+  }
+  .ldio-rwa0xznz7l {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+  }
+  .ldio-rwa0xznz7l div { box-sizing: content-box; }

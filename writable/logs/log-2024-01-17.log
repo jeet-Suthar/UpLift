@@ -1,0 +1,177 @@
+CRITICAL - 2024-01-17 06:48:48 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+in SYSTEMPATH\Router\RouteCollection.php on line 1574.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1438): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('login', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1019): CodeIgniter\Router\RouteCollection->create('get', 'login', [...], null)
+ 3 APPPATH\Config\Routes.php(11): CodeIgniter\Router\RouteCollection->get('login', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(344): require('C:\\xampp\\htdocs\\Ci4\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-01-17 06:49:23 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+in SYSTEMPATH\Router\RouteCollection.php on line 1574.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1438): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('login', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1019): CodeIgniter\Router\RouteCollection->create('get', 'login', [...], null)
+ 3 APPPATH\Config\Routes.php(11): CodeIgniter\Router\RouteCollection->get('login', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(344): require('C:\\xampp\\htdocs\\Ci4\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-01-17 06:49:36 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+in SYSTEMPATH\Router\RouteCollection.php on line 1574.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1438): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('login', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1019): CodeIgniter\Router\RouteCollection->create('get', 'login', [...], null)
+ 3 APPPATH\Config\Routes.php(11): CodeIgniter\Router\RouteCollection->get('login', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(344): require('C:\\xampp\\htdocs\\Ci4\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-01-17 06:52:27 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+in SYSTEMPATH\Router\RouteCollection.php on line 1574.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1438): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('login', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1019): CodeIgniter\Router\RouteCollection->create('get', 'login', [...], null)
+ 3 APPPATH\Config\Routes.php(11): CodeIgniter\Router\RouteCollection->get('login', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(344): require('C:\\xampp\\htdocs\\Ci4\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-01-17 06:54:41 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+in SYSTEMPATH\Router\RouteCollection.php on line 1574.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1438): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('login', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1019): CodeIgniter\Router\RouteCollection->create('get', 'login', [...], null)
+ 3 APPPATH\Config\Routes.php(11): CodeIgniter\Router\RouteCollection->get('login', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(344): require('C:\\xampp\\htdocs\\Ci4\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-01-17 06:55:02 --> TypeError: CodeIgniter\Router\RouteCollection::processArrayCallableSyntax(): Return value must be of type string, array returned
+in SYSTEMPATH\Router\RouteCollection.php on line 1574.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1438): CodeIgniter\Router\RouteCollection->processArrayCallableSyntax('login', [...])
+ 2 SYSTEMPATH\Router\RouteCollection.php(1019): CodeIgniter\Router\RouteCollection->create('get', 'login', [...], null)
+ 3 APPPATH\Config\Routes.php(11): CodeIgniter\Router\RouteCollection->get('login', [...])
+ 4 SYSTEMPATH\Router\RouteCollection.php(344): require('C:\\xampp\\htdocs\\Ci4\\app\\Config\\Routes.php')
+ 5 SYSTEMPATH\CLI\Console.php(39): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 6 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-01-17 07:55:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "header.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('header', null, true)
+ 3 APPPATH\Views\login.php(4): CodeIgniter\View\View->include('header')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 7 APPPATH\Controllers\DemoController.php(15): view('login')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-17 07:56:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "header.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('header', null, true)
+ 3 APPPATH\Views\login.php(4): CodeIgniter\View\View->include('header')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 7 APPPATH\Controllers\DemoController.php(15): view('login')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-17 07:56:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "header.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('header', null, true)
+ 3 APPPATH\Views\login.php(4): CodeIgniter\View\View->include('header')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 7 APPPATH\Controllers\DemoController.php(15): view('login')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-17 07:57:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "header.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('header.php')
+ 2 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('header', null, true)
+ 3 APPPATH\Views\login.php(4): CodeIgniter\View\View->include('header')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 7 APPPATH\Controllers\DemoController.php(15): view('login')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-17 08:02:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "../login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('../login.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('../login', null, true)
+ 3 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('template/header', null, true)
+ 4 APPPATH\Views\login.php(4): CodeIgniter\View\View->include('template/header')
+ 5 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 6 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 8 APPPATH\Controllers\DemoController.php(15): view('login')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-17 09:25:55 --> ParseError: syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\DemoController.php on line 20.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\DemoController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DemoController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DemoController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\DemoController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-17 14:48:15 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: FATAL:  password authentication failed for user "postgres~" in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 72)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(72): pg_connect('host=localhost ...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\Ci4\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\Ci4\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\Postgre\Connection))
+#5 C:\xampp\htdocs\Ci4\system\Commands\Database\CreateDatabase.php(134): CodeIgniter\Database\Config::forge()
+#6 C:\xampp\htdocs\Ci4\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\CreateDatabase->run(Array)
+#7 C:\xampp\htdocs\Ci4\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('db:create', Array)
+#8 C:\xampp\htdocs\Ci4\spark(102): CodeIgniter\CLI\Console->run()
+#9 {main}
+CRITICAL - 2024-01-17 15:19:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "DemoController::dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('DemoController::dashboard.php')
+ 2 SYSTEMPATH\Router\RouteCollection.php(1116): CodeIgniter\View\View->render('DemoController::dashboard', null)
+ 3 SYSTEMPATH\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection::CodeIgniter\Router\{closure}()
+ 4 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-17 15:20:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "DemoController::dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('DemoController::dashboard.php')
+ 2 SYSTEMPATH\Router\RouteCollection.php(1116): CodeIgniter\View\View->render('DemoController::dashboard', null)
+ 3 SYSTEMPATH\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection::CodeIgniter\Router\{closure}()
+ 4 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-17 15:20:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "DemoController::dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('DemoController::dashboard.php')
+ 2 SYSTEMPATH\Router\RouteCollection.php(1116): CodeIgniter\View\View->render('DemoController::dashboard', null)
+ 3 SYSTEMPATH\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection::CodeIgniter\Router\{closure}()
+ 4 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-17 15:20:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "DemoController::dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('DemoController::dashboard.php')
+ 2 SYSTEMPATH\Router\RouteCollection.php(1116): CodeIgniter\View\View->render('DemoController::dashboard', null)
+ 3 SYSTEMPATH\CodeIgniter.php(890): CodeIgniter\Router\RouteCollection::CodeIgniter\Router\{closure}()
+ 4 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')

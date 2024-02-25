@@ -1,0 +1,218 @@
+CRITICAL - 2024-01-27 15:00:07 --> ErrorException: Undefined variable $error
+in APPPATH\Views\profile.php on line 31.
+ 1 APPPATH\Views\profile.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php', 31)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\DemoController.php(36): view('profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-27 15:00:33 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(am0kq@1huv.com) already exists. in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\Ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\Ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\Ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\Ci4\app\Controllers\DemoController.php(32): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(941): App\Controllers\DemoController->new()
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#12 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\Ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\Ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-01-27 15:00:33 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(am0kq@1huv.com) already exists.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(32): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 15:00:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(am0kq@1huv.com) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'BFUJEtzGa8\', \'25Kp3M6WTa\', \'am0kq@1huv.com\', \'t4W7nZYXpN\', \'O2INFvUr9s\', \'1990-01-15\', \'bXd2H4HYeH\', \'CbpKWPLs2e\', \'8WZE2lZGLN\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'BFUJEtzGa8\', \'25Kp3M6WTa\', \'am0kq@1huv.com\', \'t4W7nZYXpN\', \'O2INFvUr9s\', \'1990-01-15\', \'bXd2H4HYeH\', \'CbpKWPLs2e\', \'8WZE2lZGLN\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\DemoController.php(32): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 15:00:33 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(am0kq@1huv.com) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(am0kq@1huv.com) already exists.', 'C:\\xampp\\htdocs\\Ci4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'BFUJEtzGa8\', \'25Kp3M6WTa\', \'am0kq@1huv.com\', \'t4W7nZYXpN\', \'O2INFvUr9s\', \'1990-01-15\', \'bXd2H4HYeH\', \'CbpKWPLs2e\', \'8WZE2lZGLN\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'BFUJEtzGa8\', \'25Kp3M6WTa\', \'am0kq@1huv.com\', \'t4W7nZYXpN\', \'O2INFvUr9s\', \'1990-01-15\', \'bXd2H4HYeH\', \'CbpKWPLs2e\', \'8WZE2lZGLN\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'BFUJEtzGa8\', \'25Kp3M6WTa\', \'am0kq@1huv.com\', \'t4W7nZYXpN\', \'O2INFvUr9s\', \'1990-01-15\', \'bXd2H4HYeH\', \'CbpKWPLs2e\', \'8WZE2lZGLN\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 6 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\DemoController.php(32): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 15:35:15 --> ParseError: syntax error, unexpected token "echo"
+in APPPATH\Controllers\UpliftController.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\UpliftController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UpliftController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UpliftController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\UpliftController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 15:35:38 --> ParseError: syntax error, unexpected token "echo"
+in APPPATH\Controllers\UpliftController.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\UpliftController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UpliftController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UpliftController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\UpliftController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 15:36:26 --> Error: Call to undefined function set_value()
+in APPPATH\Views\login.php on line 20.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 4 APPPATH\Controllers\UpliftController.php(17): view('login')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UpliftController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UpliftController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 15:36:57 --> Error: Object of class CodeIgniter\HTTP\IncomingRequest could not be converted to string
+in APPPATH\Controllers\UpliftController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UpliftController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UpliftController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 15:37:07 --> Error: Object of class CodeIgniter\HTTP\IncomingRequest could not be converted to string
+in APPPATH\Controllers\UpliftController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UpliftController->login()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UpliftController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 17:10:30 --> ParseError: syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\UpliftController.php on line 23.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\UpliftController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UpliftController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UpliftController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\UpliftController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 17:48:16 --> ErrorException: Undefined variable $rules
+in APPPATH\Controllers\UpliftController.php on line 35.
+ 1 APPPATH\Controllers\UpliftController.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rules', 'C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\UpliftController.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UpliftController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UpliftController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 17:48:31 --> CodeIgniter\Validation\Exceptions\ValidationException: "required " is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('required ')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('email', 'email', '7auvh@wljk.com', [...], [...])
+ 3 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\UpliftController.php(35): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UpliftController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UpliftController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 17:50:40 --> CodeIgniter\Validation\Exceptions\ValidationException: "vaild_email" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 336.
+ 1 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('vaild_email')
+ 2 SYSTEMPATH\Validation\Validation.php(200): CodeIgniter\Validation\Validation->processRules('email', 'email', '7auvh@wljk.com', [...], [...])
+ 3 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\UpliftController.php(35): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UpliftController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UpliftController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 17:57:17 --> ParseError: syntax error, unexpected variable "$validatior", expecting "," or ";"
+in APPPATH\Views\login.php on line 30.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\UpliftController.php(23): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UpliftController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UpliftController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 17:58:27 --> ParseError: syntax error, unexpected token "if"
+in APPPATH\Views\login.php on line 30.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\UpliftController.php(23): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UpliftController->login()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UpliftController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 18:11:16 --> Error: Call to a member function ListErrors() on array
+in APPPATH\Views\login.php on line 32.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 4 APPPATH\Controllers\UpliftController.php(38): view('login', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UpliftController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UpliftController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 18:14:28 --> ErrorException: Array to string conversion
+in APPPATH\Views\login.php on line 32.
+ 1 APPPATH\Views\login.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php', 32)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\UpliftController.php(38): view('login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UpliftController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UpliftController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-27 18:35:54 --> ParseError: syntax error, unexpected token "=", expecting "]"
+in APPPATH\Controllers\UpliftController.php on line 39.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\UpliftController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\UpliftController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\UpliftController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\UpliftController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')

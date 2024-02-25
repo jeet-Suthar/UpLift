@@ -1,0 +1,962 @@
+CRITICAL - 2024-01-24 05:06:19 --> Error: Call to undefined method CodeIgniter\View\View::request()
+in APPPATH\Views\login.php on line 22.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 4 APPPATH\Controllers\DemoController.php(18): view('login')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 05:06:40 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\login.php on line 22.
+ 1 APPPATH\Views\login.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\DemoController.php(18): view('login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 05:06:42 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\login.php on line 22.
+ 1 APPPATH\Views\login.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\DemoController.php(18): view('login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 05:06:54 --> Error: Object of class CodeIgniter\View\View could not be converted to string
+in APPPATH\Views\login.php on line 22.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 4 APPPATH\Controllers\DemoController.php(18): view('login')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 05:07:20 --> ErrorException: Array to string conversion
+in APPPATH\Views\login.php on line 22.
+ 1 APPPATH\Views\login.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\DemoController.php(18): view('login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 05:07:47 --> ErrorException: Array to string conversion
+in APPPATH\Views\login.php on line 22.
+ 1 APPPATH\Views\login.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\DemoController.php(18): view('login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 05:07:49 --> ErrorException: Array to string conversion
+in APPPATH\Views\login.php on line 22.
+ 1 APPPATH\Views\login.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\DemoController.php(18): view('login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 06:29:26 --> ErrorException: Undefined property: CodeIgniter\View\View::$reqeust
+in APPPATH\Views\dashboard.php on line 12.
+ 1 APPPATH\Views\dashboard.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$reqeust', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\dashboard.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\DemoController.php(22): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 06:29:44 --> ErrorException: Undefined variable $reqeust
+in APPPATH\Views\dashboard.php on line 12.
+ 1 APPPATH\Views\dashboard.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $reqeust', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\dashboard.php', 12)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\DemoController.php(22): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 06:32:02 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\DemoController.php on line 23.
+ 1 APPPATH\Controllers\DemoController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\DemoController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 06:51:33 --> ParseError: syntax error, unexpected token "*"
+in APPPATH\Controllers\DemoController.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\DemoController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DemoController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DemoController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\DemoController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 06:53:15 --> ParseError: syntax error, unexpected token "return", expecting "," or ";"
+in APPPATH\Controllers\DemoController.php on line 30.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\DemoController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DemoController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DemoController')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\DemoController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 06:53:27 --> ErrorException: Undefined array key "fname"
+in APPPATH\Controllers\DemoController.php on line 29.
+ 1 APPPATH\Controllers\DemoController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fname"', 'C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\DemoController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 06:54:59 --> ErrorException: Undefined array key "fname"
+in APPPATH\Controllers\DemoController.php on line 29.
+ 1 APPPATH\Controllers\DemoController.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fname"', 'C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\DemoController.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 07:10:53 --> ParseError: syntax error, unexpected end of file
+in APPPATH\Views\dashboard.php on line 34.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\DemoController.php(30): view('dashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 07:11:21 --> ParseError: syntax error, unexpected end of file
+in APPPATH\Views\dashboard.php on line 35.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\DemoController.php(30): view('dashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 07:11:49 --> ErrorException: Undefined variable $student
+in APPPATH\Views\dashboard.php on line 23.
+ 1 APPPATH\Views\dashboard.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\dashboard.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\DemoController.php(30): view('dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 07:12:01 --> Error: Undefined constant "user_id"
+in APPPATH\Views\dashboard.php on line 25.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard', [], true)
+ 4 APPPATH\Controllers\DemoController.php(30): view('dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 07:37:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\DemoController.php(30): view('dashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:12:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/footer.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/footer.php')
+ 2 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('template/footer', null, true)
+ 3 APPPATH\Views\profile.php(28): CodeIgniter\View\View->include('template/footer')
+ 4 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php')
+ 5 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 7 APPPATH\Controllers\DemoController.php(23): view('profile')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:16:18 --> ErrorException: Undefined variable $user
+in APPPATH\Views\profile.php on line 6.
+ 1 APPPATH\Views\profile.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\DemoController.php(25): view('profile')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:16:36 --> TypeError: printf(): Argument #1 ($format) must be of type string, array given
+in APPPATH\Views\profile.php on line 6.
+ 1 APPPATH\Views\profile.php(6): printf([...])
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\DemoController.php(25): view('profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:19:20 --> Error: Undefined constant "fname"
+in APPPATH\Views\profile.php on line 15.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 4 APPPATH\Controllers\DemoController.php(25): view('profile', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:24:34 --> ErrorException: Undefined array key "last_login"
+in APPPATH\Views\profile.php on line 17.
+ 1 APPPATH\Views\profile.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "last_login"', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php', 17)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\DemoController.php(25): view('profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:27:30 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], false)
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 4 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:36:54 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], false)
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 4 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:38:40 --> CodeIgniter\Exceptions\ModelException: "App\Models\UsersModel" model class does not have a valid dateFormat.
+in SYSTEMPATH\BaseModel.php on line 1369.
+ 1 SYSTEMPATH\BaseModel.php(1369): CodeIgniter\Exceptions\ModelException::forNoDateFormat('App\\Models\\UsersModel')
+ 2 SYSTEMPATH\BaseModel.php(1336): CodeIgniter\BaseModel->intToDate(1706085520)
+ 3 SYSTEMPATH\BaseModel.php(792): CodeIgniter\BaseModel->setDate()
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-24 08:42:39 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...suthar2003@gmail.com', '', 'ma ka bhosda ci4 ka', '', 'fdsfa...
+                                                             ^ in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\Ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\Ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\Ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\Ci4\app\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(941): App\Controllers\DemoController->new()
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#12 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\Ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\Ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-01-24 08:42:39 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...suthar2003@gmail.com', '', 'ma ka bhosda ci4 ka', '', 'fdsfa...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:42:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...suthar2003@gmail.com', '', 'ma ka bhosda ci4 ka', '', 'fdsfa...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:42:39 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...suthar2003@gmail.com', '', 'ma ka bhosda ci4 ka', '', 'fdsfa...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ...suthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'\', \'fdsfa...
+                                                             ^', 'C:\\xampp\\htdocs\\Ci4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 6 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-24 08:44:28 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (11, Jitendra, Suthar, jitsuthar2003@gmail.com, , null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:14:28.761923, null, f, fdsfad, dfad, fdasfads). in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\Ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\Ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\Ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\Ci4\app\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(941): App\Controllers\DemoController->new()
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#12 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\Ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\Ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-01-24 08:44:28 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (11, Jitendra, Suthar, jitsuthar2003@gmail.com, , null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:14:28.761923, null, f, fdsfad, dfad, fdasfads).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:44:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (11, Jitendra, Suthar, jitsuthar2003@gmail.com, , null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:14:28.761923, null, f, fdsfad, dfad, fdasfads).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:44:28 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (11, Jitendra, Suthar, jitsuthar2003@gmail.com, , null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:14:28.761923, null, f, fdsfad, dfad, fdasfads).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (11, Jitendra, Suthar, jitsuthar2003@gmail.com, , null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:14:28.761923, null, f, fdsfad, dfad, fdasfads).', 'C:\\xampp\\htdocs\\Ci4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 6 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-24 08:45:01 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (12, Jitendra, Suthar, jitsuthar2003@gmail.com, 2222, null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:15:01.585127, null, f, fdsfad, dfad, fdasfads). in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\Ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\Ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\Ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\Ci4\app\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(941): App\Controllers\DemoController->new()
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#12 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\Ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\Ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-01-24 08:45:01 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (12, Jitendra, Suthar, jitsuthar2003@gmail.com, 2222, null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:15:01.585127, null, f, fdsfad, dfad, fdasfads).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:45:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (12, Jitendra, Suthar, jitsuthar2003@gmail.com, 2222, null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:15:01.585127, null, f, fdsfad, dfad, fdasfads).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'2222\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'2222\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:45:01 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (12, Jitendra, Suthar, jitsuthar2003@gmail.com, 2222, null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:15:01.585127, null, f, fdsfad, dfad, fdasfads).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (12, Jitendra, Suthar, jitsuthar2003@gmail.com, 2222, null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:15:01.585127, null, f, fdsfad, dfad, fdasfads).', 'C:\\xampp\\htdocs\\Ci4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'2222\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'2222\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'2222\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'fdsfad\', \'dfad\', \'fdasfads\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 6 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-24 08:45:39 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (13, Jitendra, Suthar, jitsuthar2003@gmail.com, , null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:15:39.750167, null, f, kfjdkajdsfkla, dfaddfndmnf, kjdfkasdj). in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\Ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\Ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\Ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\Ci4\app\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(941): App\Controllers\DemoController->new()
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#12 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\Ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\Ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-01-24 08:45:39 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (13, Jitendra, Suthar, jitsuthar2003@gmail.com, , null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:15:39.750167, null, f, kfjdkajdsfkla, dfaddfndmnf, kjdfkasdj).
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:45:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (13, Jitendra, Suthar, jitsuthar2003@gmail.com, , null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:15:39.750167, null, f, kfjdkajdsfkla, dfaddfndmnf, kjdfkasdj).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'kfjdkajdsfkla\', \'dfaddfndmnf\', \'kjdfkasdj\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'kfjdkajdsfkla\', \'dfaddfndmnf\', \'kjdfkasdj\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:45:39 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (13, Jitendra, Suthar, jitsuthar2003@gmail.com, , null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:15:39.750167, null, f, kfjdkajdsfkla, dfaddfndmnf, kjdfkasdj).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;active&quot; of relation &quot;users&quot; violates not-null constraint
+DETAIL:  Failing row contains (13, Jitendra, Suthar, jitsuthar2003@gmail.com, , null, ma ka bhosda ci4 ka, 2024-01-24, 1990-01-15, 2024-01-24 14:15:39.750167, null, f, kfjdkajdsfkla, dfaddfndmnf, kjdfkasdj).', 'C:\\xampp\\htdocs\\Ci4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'kfjdkajdsfkla\', \'dfaddfndmnf\', \'kjdfkasdj\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'kfjdkajdsfkla\', \'dfaddfndmnf\', \'kjdfkasdj\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'kfjdkajdsfkla\', \'dfaddfndmnf\', \'kjdfkasdj\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 6 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\DemoController.php(27): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:46:58 --> ErrorException: Undefined variable $user
+in APPPATH\Views\profile.php on line 6.
+ 1 APPPATH\Views\profile.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\DemoController.php(28): view('profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 08:49:22 --> ErrorException: Undefined variable $user
+in APPPATH\Views\profile.php on line 6.
+ 1 APPPATH\Views\profile.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('profile', [], true)
+ 5 APPPATH\Controllers\DemoController.php(30): view('profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-24 09:04:04 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists. in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\Ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\Ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\Ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\Ci4\app\Controllers\DemoController.php(29): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(941): App\Controllers\DemoController->new()
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#12 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\Ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\Ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-01-24 09:04:04 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(29): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:04:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'3333\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'kfjdkajdsfkla\', \'dfaddfndmnf\', \'kjdfkasdj\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'3333\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'kfjdkajdsfkla\', \'dfaddfndmnf\', \'kjdfkasdj\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\DemoController.php(29): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:04:04 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.', 'C:\\xampp\\htdocs\\Ci4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'3333\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'kfjdkajdsfkla\', \'dfaddfndmnf\', \'kjdfkasdj\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'3333\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'kfjdkajdsfkla\', \'dfaddfndmnf\', \'kjdfkasdj\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'3333\', \'ma ka bhosda ci4 ka\', \'1990-01-15\', \'kfjdkajdsfkla\', \'dfaddfndmnf\', \'kjdfkasdj\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 6 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\DemoController.php(29): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:11:13 --> ErrorException: Undefined variable $error
+in APPPATH\Views\login.php on line 71.
+ 1 APPPATH\Views\login.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php', 71)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH\Controllers\DemoController.php(19): view('login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-24 09:12:45 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;dfa&quot;
+LINE 1: ...ar', 'jitsuthar2003@gmail.com', 'dfasda', 'dfad', 'dfa', 'dd...
+                                                             ^ in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\Ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\Ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\Ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\Ci4\app\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(941): App\Controllers\DemoController->new()
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#12 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\Ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\Ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-01-24 09:12:45 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;dfa&quot;
+LINE 1: ...ar', 'jitsuthar2003@gmail.com', 'dfasda', 'dfad', 'dfa', 'dd...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:12:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;dfa&quot;
+LINE 1: ...ar', 'jitsuthar2003@gmail.com', 'dfasda', 'dfad', 'dfa', 'dd...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'dfasda\', \'dfad\', \'dfa\', \'ddd\', \'ddd\', \'ddd\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'dfasda\', \'dfad\', \'dfa\', \'ddd\', \'ddd\', \'ddd\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:12:45 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;dfa&quot;
+LINE 1: ...ar', 'jitsuthar2003@gmail.com', 'dfasda', 'dfad', 'dfa', 'dd...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;dfa&quot;
+LINE 1: ...ar\', \'jitsuthar2003@gmail.com\', \'dfasda\', \'dfad\', \'dfa\', \'dd...
+                                                             ^', 'C:\\xampp\\htdocs\\Ci4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'dfasda\', \'dfad\', \'dfa\', \'ddd\', \'ddd\', \'ddd\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'dfasda\', \'dfad\', \'dfa\', \'ddd\', \'ddd\', \'ddd\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'dfasda\', \'dfad\', \'dfa\', \'ddd\', \'ddd\', \'ddd\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 6 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-24 09:14:03 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Suthar', 'jitsuthar2003@gmail.com', '', 'dfad', '', 'ddd',...
+                                                             ^ in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\Ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\Ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\Ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\Ci4\app\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(941): App\Controllers\DemoController->new()
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#12 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\Ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\Ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-01-24 09:14:03 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Suthar', 'jitsuthar2003@gmail.com', '', 'dfad', '', 'ddd',...
+                                                             ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:14:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Suthar', 'jitsuthar2003@gmail.com', '', 'dfad', '', 'ddd',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'\', \'ddd\', \'ddd\', \'ddd\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'\', \'ddd\', \'ddd\', \'ddd\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:14:03 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... 'Suthar', 'jitsuthar2003@gmail.com', '', 'dfad', '', 'ddd',...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type date: &quot;&quot;
+LINE 1: ... \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'\', \'ddd\',...
+                                                             ^', 'C:\\xampp\\htdocs\\Ci4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'\', \'ddd\', \'ddd\', \'ddd\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'\', \'ddd\', \'ddd\', \'ddd\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'\', \'ddd\', \'ddd\', \'ddd\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 6 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-24 09:14:32 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists. in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\Ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\Ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\Ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\Ci4\app\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(941): App\Controllers\DemoController->new()
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#12 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\Ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\Ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-01-24 09:14:32 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:14:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'2022-02-10\', \'ddd\', \'ddd\', \'ddd\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'2022-02-10\', \'ddd\', \'ddd\', \'ddd\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:14:32 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.', 'C:\\xampp\\htdocs\\Ci4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'2022-02-10\', \'ddd\', \'ddd\', \'ddd\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'2022-02-10\', \'ddd\', \'ddd\', \'ddd\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'2022-02-10\', \'ddd\', \'ddd\', \'ddd\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 6 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-01-24 09:16:34 --> ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists. in C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\Ci4\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "us...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "us...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "us...')
+#4 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "us...', Array, false)
+#5 C:\xampp\htdocs\Ci4\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\Ci4\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\Ci4\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\system\BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\Ci4\app\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(941): App\Controllers\DemoController->new()
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+#12 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\Ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\Ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-01-24 09:16:34 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:16:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'2022-02-10\', \'ddd\', \'ddd\', \'ddd\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'2022-02-10\', \'ddd\', \'ddd\', \'ddd\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-01-24 09:16:34 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  duplicate key value violates unique constraint &quot;unique_email&quot;
+DETAIL:  Key (email)=(jitsuthar2003@gmail.com) already exists.', 'C:\\xampp\\htdocs\\Ci4\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'2022-02-10\', \'ddd\', \'ddd\', \'ddd\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'2022-02-10\', \'ddd\', \'ddd\', \'ddd\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (\'Jitendra\', \'Suthar\', \'jitsuthar2003@gmail.com\', \'\', \'dfad\', \'2022-02-10\', \'ddd\', \'ddd\', \'ddd\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO "users" ("fname", "lname", "email", "user_password", "bio", "birth_date", "anonymous_username", "anonymous_profile_dp", "username") VALUES (:fname:, :lname:, :email:, :user_password:, :bio:, :birth_date:, :anonymous_username:, :anonymous_profile_dp:, :username:)', [...], false)
+ 6 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\DemoController.php(30): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DemoController->new()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DemoController))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
