@@ -154,11 +154,11 @@ $(document).ready(function () {
 
         if (isActive) {
             // incrementing like count using parseInt inside html and adding 1
-            $(this).siblings('.like-count').html(parseInt($(this).siblings('.like-count').html())+1);
+            $(this).siblings('.like-count').html(parseInt($(this).siblings('.like-count').html()) + 1);
         }
         else {
             // decrementing like count using parseInt inside html and sunbstractng by 1
-            $(this).siblings('.like-count').html(parseInt($(this).siblings('.like-count').html())-1);
+            $(this).siblings('.like-count').html(parseInt($(this).siblings('.like-count').html()) - 1);
         }
     });
 
@@ -168,7 +168,7 @@ $(document).ready(function () {
     });
 
 
-    $('.search-input').keyup(function(event) {
+    $('.search-input').keyup(function (event) {
         // Check if Enter key is pressed (key code 13)
         if (event.keyCode === 13) {
             // Perform search action

@@ -61,7 +61,7 @@
                 <?= $this->include('components/stories') ?>
                 <?= $this->include('components/stories') ?>
                 <?= $this->include('components/stories') ?>
-               
+
             </div>
 
 
@@ -78,11 +78,62 @@
 
         <div class="right-sidebar">
 
-            <span>Stories</span>
+            <span>Verification</span>
 
-            <div class="stories-section">
+            <div class="verification-section">
 
-                <div class="stories-element">
+
+                <div class="verification-element">
+
+                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
+
+                    <div class=" mt-2">
+                        <h6>chad guru</h6>
+                        <p>2 hours</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="verification-element">
+
+                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
+
+                    <div class=" mt-2">
+                        <h6>chad guru</h6>
+                        <p>2 hours</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="verification-element">
+
+                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
+
+                    <div class=" mt-2">
+                        <h6>chad guru</h6>
+                        <p>2 hours</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="verification-element">
+
+                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
+
+                    <div class=" mt-2">
+                        <h6>chad guru</h6>
+                        <p>2 hours</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="verification-element">
+
+                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
+
+                    <div class=" mt-2">
+                        <h6>chad guru</h6>
+                        <p>2 hours</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="verification-element">
 
                     <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
 
@@ -93,70 +144,7 @@
                     </div>
                 </div>
 
-
-                <div class="stories-element">
-
-                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
-
-                    <div class=" mt-2">
-                        <h6>chad guru</h6>
-                        <p>2 hours</p>
-                        <p></p>
-                    </div>
-                </div>
-
-
-                <div class="stories-element">
-
-                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
-
-                    <div class=" mt-2">
-                        <h6>chad guru</h6>
-                        <p>2 hours</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="stories-element">
-
-                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
-
-                    <div class=" mt-2">
-                        <h6>chad guru</h6>
-                        <p>2 hours</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="stories-element">
-
-                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
-
-                    <div class=" mt-2">
-                        <h6>chad guru</h6>
-                        <p>2 hours</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="stories-element">
-
-                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
-
-                    <div class=" mt-2">
-                        <h6>chad guru</h6>
-                        <p>2 hours</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="stories-element">
-
-                    <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
-
-                    <div class=" mt-2">
-                        <h6>chad guru</h6>
-                        <p>2 hours</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="stories-element">
+                <div class="verification-element">
 
                     <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
 
