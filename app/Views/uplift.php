@@ -51,16 +51,7 @@
 
             <!-- Acts of Kindness card section -->
 
-            <div class="aok-card-section">
-                <?= $this->include('components/stories') ?>
-                <?= $this->include('components/stories') ?>
-                <?= $this->include('components/stories') ?>
-                <?= $this->include('components/stories') ?>
-                <?= $this->include('components/stories') ?>
-                <?= $this->include('components/stories') ?>
-                <?= $this->include('components/stories') ?>
-                <?= $this->include('components/stories') ?>
-                <?= $this->include('components/stories') ?>
+            <div class="stories-section">
 
             </div>
 

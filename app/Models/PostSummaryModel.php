@@ -12,11 +12,10 @@ class PostSummaryModel extends Model
     // protected $protectFields    = true;
     protected $allowedFields    = ['user_id', 'media_url', 'caption', 'type', 'uploaded_time', 'total_likes', 'total_comments'];
 
-    
     //! NOTE read following ->
     //* following function will get all from db ordered by date and with offset and limit range only
     //* for easy debug and updatation in future  
-        public function getPosts($limit, $offset)
+    public function getPosts($limit, $offset)
     {
         return $this->orderBy('uploaded_time', 'DESC')->findAll($limit, $offset);
     }

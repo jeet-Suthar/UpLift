@@ -3,7 +3,11 @@ var totalPost;
 let totalPage;
 let page;
 var postEnded = false;
-
+var storyData;
+var currentStoryNumber = 0;
+var LatestStoriesArray = [];
+var userId;// for storeis section 
+var positionInLatestStoriesArray;
 
 //for loading animation 
 var loadingAnimation = `<div id="loadingAnimation" class="loadingio-spinner-eclipse-f5f99z8brf4"><div class="ldio-rwa0xznz7l">
@@ -31,7 +35,7 @@ function displayPost() {
             type: 'GET',
             success: function (response) {
                 // Replace the existing content with the loaded form
-                console.log(response);
+                // console.log(response);
                 $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
                 $('.main-feed').append(response); // to add posts to main-feed
 
@@ -55,7 +59,7 @@ function displayPost() {
             success: function (response) {
                 $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
 
-                console.log(response);
+                // console.log(response);
                 $('.main-feed').append(response);
 
             },
@@ -99,11 +103,206 @@ async function loadPost() {
 
 }
 
+//function for getting stories data by user_id
+function getStoriesInfo(userId) {
+    $.ajax({
+        url: "getStoriesOfUser/" + userId,
+        type: 'GET',
+        async: false,
+        dataType: 'json',
+        // async : false,
+        success: function (response) {
+
+            storyData = response;
+
+        },
+        error: function (error) {
+            // Handle errors, e.g., show an error message to the user
+            console.error('Error loading posts:', error);
+        }
+    });
+}
+
+function storiesReplacment() {
+
+    $('.story-user-info img').attr("src", 'uploads/image/' + storyData.userInfo.profile_dp)
+    $('.story-user-info p').html(storyData.userInfo.fname + ' ' + storyData.userInfo.lname);
+    $('#story-media').attr("src", 'uploads/stories/image/' + storyData.stories[0]["media"]);
+    $(".progress-bar-section").empty();
+    for (var i = 0; i < storyData.stories.length; i++) {
+        $(".progress-bar-section").append('<div class="progress-bar bar-' + i + '"></div>')
+    }
+}
+
 $(document).ready(function () {
 
     // to load post from database asyncronously 
     page = 1; // initial page 
     loadPost();
+
+    // AJAX fun for getting latest stories array which have user_id
+    $.ajax({
+        url: 'latestStoriesArray',
+        type: 'GET',
+        // async : false,
+        dataType: 'json',
+        success: function (response) {
+            // $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+            // console.log(response)
+            for (var i = 0; i < response.latestStories.length; i++) {
+
+                // console.log(response.latestStories[i].user_id);
+                LatestStoriesArray[i] = (response.latestStories[i].user_id);
+            }
+            // console.log(LatestStoriesArray)
+
+            // console.log(LatestStoriesArray);
+
+        },
+        error: function (error) {
+            // Handle errors, e.g., show an error message to the user
+            console.error('Error loading posts:', error);
+        }
+    });
+
+
+    // this will append new stories in story section 
+    //stories loading section
+    $.ajax({
+        url: 'latestStories',
+        type: 'GET',
+        // async : false,
+        success: function (response) {
+            // $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+            // console.log(response);
+            $('.stories-section').append(response);
+
+        },
+        error: function (error) {
+            // Handle errors, e.g., show an error message to the user
+            console.error('Error loading posts:', error);
+        }
+    });
+
+    //stories dialog box click event
+    $(document).on('click', '.story-container', function () {
+        console.log("story is pressed");
+        userId = $(this).data('user-id');
+        console.log("story of user with userId : " + userId);
+
+        getStoriesInfo(userId); // function which get story info of current user i.e storyData
+
+        //!IDFK why indexOf() is not working so i came up this for loop (back to basic)
+        for (var i = 0; i < LatestStoriesArray.length; i++) {
+            if (LatestStoriesArray[i] == userId)
+                positionInLatestStoriesArray = i;
+        }
+
+
+        //displaying layout of story dialog box
+        $.ajax({
+            url: 'storyDialogBox',
+            type: 'GET',
+            async: false,
+            success: function (response) {
+                // $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+                // console.log(response);
+                $('.stories-section').append(response);
+                $('.story-user-info img').attr("src", 'uploads/image/' + storyData.userInfo.profile_dp)
+                $('.story-user-info p').html(storyData.userInfo.fname + ' ' + storyData.userInfo.lname);
+                $('#story-media').attr("src", 'uploads/stories/image/' + storyData.stories[0]["media"]);
+                for (var i = 0; i < storyData.stories.length; i++) {
+                    $(".progress-bar-section").append('<div class="progress-bar bar-' + i + '"></div>')
+                }
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading posts:', error);
+            }
+        });
+
+    })
+
+
+    $(document).on('click', '.story-right-click', function () {
+        console.log(storyData);
+        console.log('len of story' + storyData.stories.length)
+        if (currentStoryNumber < storyData.stories.length - 1) {
+            currentStoryNumber++;
+            $('#story-media').attr("src", 'uploads/stories/image/' + storyData.stories[currentStoryNumber]["media"]);
+
+            console.log(currentStoryNumber)
+            // console.log(currentStoryNumber - 1 + ' this is bar no')
+            // console.log(".progress-bar-section bar-" + (currentStoryNumber - 1))
+
+            //! for selelcting two of same attr we have user . operator after , commma
+            $(".progress-bar-section, .bar-" + (currentStoryNumber - 1)).addClass(' active');
+
+        }
+        else {
+            // console.log("story khatam r")
+            // console.log(currentStoryNumber)
+            console.log('current position before increment ' + positionInLatestStoriesArray)
+            console.log('length of array ' + LatestStoriesArray.length)
+
+            positionInLatestStoriesArray++;
+            console.log('current position after increment ' + positionInLatestStoriesArray)
+
+            if (positionInLatestStoriesArray < LatestStoriesArray.length) {
+                console.log(LatestStoriesArray[positionInLatestStoriesArray]);
+                currentStoryNumber = 0;
+
+                getStoriesInfo(LatestStoriesArray[positionInLatestStoriesArray]);
+                storiesReplacment();
+
+            }
+            else {
+                console.log('this story end and next story should begin')
+                $('#story-dialog').remove();
+                currentStoryNumber = 0;
+            }
+
+        }
+
+    })
+
+    $(document).on('click', '.story-left-click', function () {
+
+        if (currentStoryNumber > 0) {
+            currentStoryNumber--;
+            $('#story-media').attr("src", 'uploads/stories/image/' + storyData.stories[currentStoryNumber]["media"]);
+            $(".progress-bar-section, .bar-" + (currentStoryNumber)).removeClass(' active');
+
+            console.log("C S " + currentStoryNumber)
+        }
+        else {
+            currentStoryNumber = 0;
+            positionInLatestStoriesArray--;
+            if (positionInLatestStoriesArray >= 0) {
+                currentStoryNumber = 0;
+
+                getStoriesInfo(LatestStoriesArray[positionInLatestStoriesArray]);
+                storiesReplacment();
+
+            }
+            else {
+                $('#story-dialog').remove();
+                currentStoryNumber = 0;
+                positionInLatestStoriesArray = 0;
+            }
+
+
+        }
+
+    })
+
+
+
+
 
     $(window).scroll(function () {
         // Check if the user has scrolled to 90% of the page
@@ -177,13 +376,3 @@ $(document).ready(function () {
     });
 
 });
-
-
-
-//post javasript section
-
-$('.three-dots-menu').on('click', function () {
-    $('.dropdown-menu').toggle();
-});
-
-// Like button toggle

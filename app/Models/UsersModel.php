@@ -7,27 +7,39 @@ use CodeIgniter\Model;
 class UsersModel extends Model
 {
     protected $table            = 'users';
-    protected $allowedFields    = ['fname','lname','email','user_password',' profile_dp','bio','birth_date','anonymous_username','anonymous_profile_dp','username'];
+    protected $allowedFields    = ['fname', 'lname', 'email', 'user_password', ' profile_dp', 'bio', 'birth_date', 'anonymous_username', 'anonymous_profile_dp', 'username'];
 
     protected $beforeInsert   = ['beforeInsertPassword']; //if new password is inserted it will be hashed and then inserted in db
     protected $beforeUpdate   = ['beforeUpdatePassword']; //same
 
-    protected function beforeInsertPassword(array $data) {
+
+    //getting user information just using userId variable
+    public function getUserInfo($userId)
+    {
+        $query = $this->select('fname,lname, username, profile_dp', FALSE)
+            ->where('user_id', $userId)
+            ->first();
+
+        return $query;
+    }
+
+    protected function beforeInsertPassword(array $data)
+    {
         $data = $this->hashPassword($data);
         return $data;
     }
-    
-    protected function beforeUpdatePassword(array $data) {
+
+    protected function beforeUpdatePassword(array $data)
+    {
         $data = $this->hashPassword($data);
         return $data;
-        
     }
 
-    protected function hashPassword(array $data){
-        if(isset($data['data']['user_password']))
-            $data['data']['user_password'] = password_hash($data['data']['user_password'],PASSWORD_DEFAULT);
-            return $data;
-
+    protected function hashPassword(array $data)
+    {
+        if (isset($data['data']['user_password']))
+            $data['data']['user_password'] = password_hash($data['data']['user_password'], PASSWORD_DEFAULT);
+        return $data;
     }
 
     // Dates

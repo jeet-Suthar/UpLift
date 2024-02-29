@@ -167,7 +167,9 @@ for home page
     padding: 20px;
 }
 
-.aok-card-section {
+/** -----------stories section-------- */
+
+.stories-section {
     overflow-y: scroll;
     display: flex;
 
@@ -216,16 +218,27 @@ for home page
     overflow: hidden;
 }
 
-.profile-picture img {
+/* .profile-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 
 
+} */
+
+.latest-stories-front-page {
+    height: 100%;
+}
+
+.latest-stories-front-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 
-.username {
+.story-username {
     position: absolute;
     bottom: 10px;
     /* Adjust the distance from the bottom */
@@ -235,8 +248,138 @@ for home page
     font-size: 14px;
     color: #ffffff;
     /* White color for text */
-    text-shadow: #3d3d3e;
+    text-shadow: 0 0 5px #000000;
     /* Add a shadow effect */
+}
+
+#story-dialog {
+    /* display: none; */
+    justify-content: center;
+    /* align-items: center; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+
+#story-dialog-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 500px;
+    color: white;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.story-dialog-media {
+    margin: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+
+}
+
+.stories-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+
+.story-user-info {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 10px;
+}
+
+.stories-header img {
+    margin: 0;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.stories-header p {
+    font-size: 15px;
+    color: rgb(186, 183, 183);
+
+}
+
+.stories-header h6 {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+#story-close-button {
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    cursor: pointer;
+}
+
+.story-footer {
+    margin-top: 10px;
+}
+
+.story-reply {
+    border: 2px solid rgb(120, 120, 120);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* progress bars */
+
+.progress-bar-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 100%;
+
+}
+
+.progress-bar {
+    height: 2px;
+    width: 22%;
+    /* IDK why but 22% width just take appropriate width */
+    background-color: #b9b9b9;
+    margin-right: 5px;
+
+}
+
+.progress-bar.active {
+    background-color: #ac89e4;
+
+}
+
+.story-media-section {
+    position: relative;
+}
+
+.story-left-click {
+    width: 100px;
+    position: absolute;
+    height: 100%;
+}
+
+.story-right-click {
+    top: 0;
+    right: 0;
+    width: 100px;
+    position: absolute;
+    height: 100%;
 }
 
 

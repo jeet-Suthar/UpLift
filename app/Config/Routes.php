@@ -16,8 +16,8 @@ $routes->post('dashboard', 'DemoController::dashboard');
 // $routes->post('new', 'DemoController::new');
 
 //for login
-$routes->match(['get','post'],'login', 'UpliftController::login');
-$routes->match(['get','post'],'signup', 'UpliftController::signup');
+$routes->match(['get', 'post'], 'login', 'UpliftController::login');
+$routes->match(['get', 'post'], 'signup', 'UpliftController::signup');
 
 //for logout
 
@@ -36,10 +36,16 @@ $routes->post('submitPost', 'UpliftController::submitPost');
 $routes->get('post', 'UpliftController::post');
 
 //for post using ajax
-$routes->get('get_post/(:any)', 'PostController::get_post/$1');  
+$routes->get('get_post/(:any)', 'PostController::get_post/$1');
 $routes->get('totalPost', 'PostController::totalPost');
 
-
+//story controller
+$routes->post('add_stories', 'storiesController::add_stories');
+$routes->get('story_form', 'storiesController::story_form');
+$routes->get('storyDialogBox', 'storiesController::storyDialogBox');
+$routes->get('latestStories', 'storiesController::latestStories');
+$routes->get('latestStoriesArray', 'storiesController::latestStoriesArray');
+$routes->get('getStoriesOfUser/(:num)', 'storiesController::getStoriesOfUser/$1');
 
 
 
