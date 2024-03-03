@@ -9,7 +9,6 @@
             </div>
             <div class="story-user-info">
                 <img src="" alt="Profile Picture" class="rounded-circle mr-2" width="40">
-
                 <p></p>
             </div>
 

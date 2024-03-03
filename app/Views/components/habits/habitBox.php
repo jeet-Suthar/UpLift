@@ -1,0 +1,155 @@
+<style>
+    .box {
+        position: relative;
+        width: 380px;
+        /* Adjusted width to fit all circles in one line */
+        padding: 20px;
+        background-color: #222;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        /* Increased shadow visibility */
+    }
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .streak-text {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .day-circles {
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .day-circle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #444;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        /* Increased shadow visibility */
+    }
+
+    .day-date {
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 5px;
+        /* Add gap between date and day letter */
+    }
+
+    .day-letter {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .current-day-ring {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 42px;
+        height: 42px;
+        border: 1px solid #9B30FF;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+</style>
+
+
+<div>
+    <div class="box">
+        <div class="logo">
+            <img src="your_logo_url_here" alt="Logo">
+        </div>
+        <div class="streak-text">Streak</div>
+        <div class="day-circles" id="dayCircles">
+        </div>
+    </div>
+
+
+
+    <script>
+        // Get the container for day circles
+        var dayCirclesContainer = document.getElementById('dayCircles');
+
+        // Get current date
+        var currentDate = new Date();
+        // Get current day of the week (0: Sunday, 1: Monday, ..., 6: Saturday)
+        var currentDayOfWeek = currentDate.getDay();
+
+        // Array to store day names
+        var days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+
+        // Generate day circles for the current week
+        for (let i = currentDayOfWeek; i >= 0; i--) {
+            var date = new Date(currentDate);
+            date.setDate(currentDate.getDate() - i);
+            var day = date.getDate();
+
+            var dayCircle = document.createElement('div');
+            dayCircle.classList.add('day-circle');
+
+            if (i === 0) {
+                var currentDayRing = document.createElement('div');
+                currentDayRing.classList.add('current-day-ring');
+                dayCircle.appendChild(currentDayRing);
+            }
+
+            var dayDateElement = document.createElement('div');
+            dayDateElement.classList.add('day-date');
+            dayDateElement.textContent = day;
+
+            var dayLetterElement = document.createElement('div');
+            dayLetterElement.classList.add('day-letter');
+            dayLetterElement.textContent = days[date.getDay()];
+
+            dayCircle.appendChild(dayDateElement);
+            dayCircle.appendChild(dayLetterElement);
+
+            dayCirclesContainer.appendChild(dayCircle);
+        }
+
+        // Add Saturday to the current week
+        var saturday = new Date(currentDate);
+        saturday.setDate(currentDate.getDate() + (6 - currentDayOfWeek));
+        var saturdayDay = saturday.getDate();
+
+        var saturdayCircle = document.createElement('div');
+        saturdayCircle.classList.add('day-circle');
+
+        var saturdayDateElement = document.createElement('div');
+        saturdayDateElement.classList.add('day-date');
+        saturdayDateElement.textContent = saturdayDay;
+
+        var saturdayLetterElement = document.createElement('div');
+        saturdayLetterElement.classList.add('day-letter');
+        saturdayLetterElement.textContent = days[saturday.getDay()];
+
+        saturdayCircle.appendChild(saturdayDateElement);
+        saturdayCircle.appendChild(saturdayLetterElement);
+
+        dayCirclesContainer.appendChild(saturdayCircle);
+    </script>
+</div>

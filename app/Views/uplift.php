@@ -4,7 +4,7 @@
     <?= $this->include('template/navbar') ?>
     <div class="content mt-3">
 
-        <!-- left side bar  -->
+        <!--left side bar  -->
 
         <div class="left-sidebar  col-md-2 pt-4">
 
@@ -13,7 +13,7 @@
             </div>
 
             <div class="sidebar-options">
-                <div class="sidebar-item active">
+                <div class="sidebar-item home-btn active">
                     <i class="fas fa-home avtive"></i> Home
                 </div>
                 <div class="sidebar-item">
@@ -22,8 +22,8 @@
                 <div class="sidebar-item">
                     <i class="fas fa-regular fa-comment-dots"></i> Messages
                 </div>
-                <div class="sidebar-item">
-                    <i class="fas fa-chart-line"></i> Habits
+                <div class="sidebar-item habit-btn">
+                    <i class="fas fa-chart-line "></i> Habits
                 </div>
                 <div class="sidebar-item">
                     <i class="fas fa-calendar-alt"></i> Events
@@ -45,23 +45,13 @@
 
         </div>
 
-        <!-- centeral paet of page which will contain AOK cards add post and main feed -->
+        <!-- centeral paet of page which will contain stories and main feed -->
 
         <div class="center-content col-md-7">
 
-            <!-- Acts of Kindness card section -->
+            <!-- stories-section div will added here dynamically -->
 
-            <div class="stories-section">
-
-            </div>
-
-
-            <!-- main feed which will contain feed generate by AJAX -->
-
-            <div class="main-feed">
-
-
-            </div>
+            <!-- main-feed div will added here dynamically -->
 
         </div>
 

@@ -8,11 +8,9 @@ var currentStoryNumber = 0;
 var LatestStoriesArray = [];
 var userId;// for storeis section 
 var positionInLatestStoriesArray;
-
 //for loading animation 
 var loadingAnimation = `<div id="loadingAnimation" class="loadingio-spinner-eclipse-f5f99z8brf4"><div class="ldio-rwa0xznz7l">
-<div></div>
-</div></div>`;
+<div></div></div></div>`;
 
 // for scroll 90% 
 function isScrollAtBottom() {
@@ -133,11 +131,15 @@ function storiesReplacment() {
         $(".progress-bar-section").append('<div class="progress-bar bar-' + i + '"></div>')
     }
 }
+async function homeContent() {
 
-$(document).ready(function () {
+    $('.center-content').append('<div class="stories-section"></div>');
+    $('.center-content').append('<div class="main-feed"></div>');
 
     // to load post from database asyncronously 
     page = 1; // initial page 
+    // $('.center-content').empty();
+
     loadPost();
 
     // AJAX fun for getting latest stories array which have user_id
@@ -166,17 +168,16 @@ $(document).ready(function () {
         }
     });
 
-
     // this will append new stories in story section 
     //stories loading section
-    $.ajax({
+    await $.ajax({
         url: 'latestStories',
         type: 'GET',
         // async : false,
         success: function (response) {
             // $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
 
-            // console.log(response);
+            console.log(response);
             $('.stories-section').append(response);
 
         },
@@ -185,7 +186,33 @@ $(document).ready(function () {
             console.error('Error loading posts:', error);
         }
     });
+}
 
+$(window).scroll(function () {
+    // Check if the user has scrolled to 90% of the page
+    if (isScrollAtBottom()) {
+
+        // this if condition will check if current page have .main-class or not
+        if ($('.main-feed')[0]) {
+
+            // Call the loadPosts function when the user scrolls to 90% of the page
+            if (page < totalPage) {
+                ++page;
+                console.log(page);
+                console.log(totalPage);
+                displayPost();
+            }
+
+
+        }
+
+    }
+});
+
+
+$(document).ready(function () {
+
+    homeContent();      //it will load main content in home
     //stories dialog box click event
     $(document).on('click', '.story-container', function () {
         console.log("story is pressed");
@@ -301,26 +328,6 @@ $(document).ready(function () {
     })
 
 
-
-
-
-    $(window).scroll(function () {
-        // Check if the user has scrolled to 90% of the page
-        if (isScrollAtBottom()) {
-            // Call the loadPosts function when the user scrolls to 90% of the page
-            if (page < totalPage) {
-                ++page;
-                console.log(page);
-                console.log(totalPage);
-                displayPost();
-            }
-
-
-        }
-    });
-
-
-
     // for geting to post_form page (will be added to add post section on home page)
     $('.btn').click(function () {
         console.log("button is pressed");
@@ -337,6 +344,39 @@ $(document).ready(function () {
                 console.error('Error loading form:', error);
             }
         });
+    })
+
+
+    $('.habit-btn').click(function () {
+        console.log("habit button is pressed");
+        $('.center-content').empty();
+
+        $.ajax({
+            url: 'habit',
+            type: 'GET',
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+
+                $('.center-content').append(response);
+                console.log("habit kjdfka");
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+
+
+    })
+
+    $('.home-btn').click(function () {
+        $('.center-content').empty();
+        // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+        homeContent();
     })
 
     //! IMP discussion: As posts are added dynamically we cannot just add jquery to static DOM object

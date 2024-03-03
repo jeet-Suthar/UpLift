@@ -48,6 +48,10 @@ $routes->get('latestStoriesArray', 'storiesController::latestStoriesArray');
 $routes->get('getStoriesOfUser/(:num)', 'storiesController::getStoriesOfUser/$1');
 
 
+// habits section
+$routes->get('habit', 'HabitController::habit');
+
+
 
 
 // for admin only
