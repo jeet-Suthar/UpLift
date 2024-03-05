@@ -623,3 +623,81 @@ hr {
 .ldio-rwa0xznz7l div {
     box-sizing: content-box;
 }
+
+
+/** ------------------ HABIT SECTION -------------- */
+
+.calendar {
+    width: 250px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #323232;
+
+    /* IE 10+ */
+    user-select: none;
+    /* Standard syntax */
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.month div {
+    color: #999393;
+    cursor: pointer;
+    padding: 0 10px;
+    outline: none;
+
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.weekdays div {
+    font-size: 12px;
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.dates div {
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    /* background-color: #605d5d; */
+}
+
+.dates div.current-month {
+    color: #ffffff;
+    background-color: #58495f;
+}
+
+.dates div.outside-month {
+    color: #aaa;
+}
+
+.year-calendar {
+    font-size: 15px;
+
+}
+
+.empty-cell {
+    visibility: hidden;
+}
