@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .reward-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .reward {
+            width: 250px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #333;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            z-index: inherit;
+        }
+
+        .reward:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        .reward img {
+            width: 120px;
+            height: 120px;
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .reward h3 {
+            text-align: center;
+            font-size: 18px;
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: fit-content;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            text-align: center;
+            margin-left: -80px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="reward-container">
+        <div class="reward tooltip">
+            <img src="https://picsum.photos/200" alt="Reward 1">
+            <h3>Reward 1</h3>
+            <span class="tooltiptext">Description for Reward 1.</span>
+        </div>
+        <div class="reward tooltip">
+            <img src="https://picsum.photos/201" alt="Reward 2">
+            <h3>Reward 2</h3>
+            <span class="tooltiptext">Description for Reward 2.</span>
+        </div>
+        <div class="reward tooltip">
+            <img src="https://picsum.photos/202" alt="Reward 3">
+            <h3>Reward 3</h3>
+            <span class="tooltiptext">DescriptionDescriptionDescriptionDescriptionDescription for Reward 3.</span>
+        </div>
+        <div class="reward tooltip">
+            <img src="https://picsum.photos/202" alt="Reward 3">
+            <h3>Reward 3</h3>
+            <span class="tooltiptext">Description for Reward 3.</span>
+        </div>
+        <div class="reward tooltip">
+            <img src="https://picsum.photos/202" alt="Reward 3">
+            <h3>Reward 3</h3>
+            <span class="tooltiptext">Description for Reward 3.</span>
+        </div>
+        <div class="reward tooltip">
+            <img src="https://picsum.photos/202" alt="Reward 3">
+            <h3>Reward 3</h3>
+            <span class="tooltiptext">Description for Reward 3.</span>
+        </div>
+    </div>
+
+</body>
+
+</html>

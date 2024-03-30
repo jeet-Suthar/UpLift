@@ -1,8 +1,3 @@
-h3 {
-    background-color: black;
-    font-size: 40px;
-}
-
 .p-3 {
     margin: auto;
 }
@@ -674,15 +669,14 @@ hr {
     gap: 5px;
 }
 
-.dates div {
+/* .dates div {
     font-size: 15px;
     width: 25px;
     height: 25px;
     line-height: 25px;
     text-align: center;
     border-radius: 50%;
-    /* background-color: #605d5d; */
-}
+}*/
 
 .dates div.current-month {
     color: #ffffff;
@@ -700,4 +694,199 @@ hr {
 
 .empty-cell {
     visibility: hidden;
+}
+
+
+
+/** Calendar with dynamic date data */
+/* this for progress circle which is around dates */
+
+.circle-wrap {
+    display: grid;
+    grid-template-columns: repeat(1, 160px);
+    grid-gap: 80px;
+    /* margin-top: 100px;
+    margin-left: 50px; */
+    width: 28px;
+    height: 28px;
+    background: #464646;
+    border-radius: 50%;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 28px, 28px, 14px);
+}
+
+.circle-wrap .inside-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #464646;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 2px;
+    margin-left: 2px;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    /* font-weight: 700; */
+    font-size: 14px;
+}
+
+/* color animation */
+
+.mask .fill {
+    clip: rect(0px, 14px, 28px, 0px);
+    background-color: #ff0000;
+}
+
+.mask.full,
+.circle .fill {
+    /* animation: fill ease-in-out 3s; */
+    transform: rotate(0deg);
+}
+
+/** user Habits CSS */
+.user-habits {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.habit-container {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(40, 40, 40);
+
+    border: 1px solid #495057;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.habit-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.streak-count {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.validate-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 12px;
+
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.habit-description {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    color: gray;
+    font-size: 14px;
+    width: 70%;
+}
+
+/** User Reward section  */
+/* here reward of user are style */
+
+.user-reward-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+
+}
+
+.user-reward {
+    /* position: relative; */
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #9b9b9b;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.user-reward:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.user-reward img {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.user-reward h3 {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+    transition: all 0.3s ease;
+
+}
+
+/* Tooltip */
+.user-reward-tooltip {
+    position: absolute;
+    visibility: hidden;
+    background-color: #292929;
+    color: #a19f9f;
+    text-align: center;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-top: 15px;
+    padding: 5px 10px;
+    z-index: 10;
+    opacity: 0;
+    font-size: 12px;
+    transition: opacity 0.3s;
+}
+
+.user-reward-tooltip::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.user-reward:hover .user-reward-tooltip {
+    visibility: visible;
+    opacity: 1;
+    z-index: 10;
+
 }

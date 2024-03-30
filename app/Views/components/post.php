@@ -129,8 +129,5 @@ if (isset($post_data)) :
         </div>
         </div>
 
-        <!-- //! don't remove this above div  -->
-
-
 <?php endforeach;
 endif; ?>

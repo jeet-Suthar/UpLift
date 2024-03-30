@@ -351,6 +351,7 @@ $(document).ready(function () {
         console.log("habit button is pressed");
         $('.center-content').empty();
 
+
         $.ajax({
             url: 'habit',
             type: 'GET',
@@ -359,7 +360,6 @@ $(document).ready(function () {
                 // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
 
                 $('.center-content').append(response);
-                console.log("habit kjdfka");
 
 
             },

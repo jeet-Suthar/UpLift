@@ -70,6 +70,19 @@
 
         })
 
+        function dateDivData(date, isTodayDate = "") {
+            return (`<div class="circle-wrap ${isTodayDate}">
+                        <div class="circle">
+                            <div class="mask full">
+                                <div class="fill"></div>
+                            </div>
+                            <div class="mask half">
+                                <div class="fill"></div>
+                            </div>
+                            <div class="inside-circle">${date}</div>
+                        </div>
+                    </div>`);
+        }
 
         function calendar(monthIndex, currentYear) {
             var monthName = months[monthIndex];
@@ -109,16 +122,19 @@
                         emptyCell.classList.add('empty-cell');
                         datesContainer.appendChild(emptyCell);
                     } else if (dayCount <= daysInMonth) {
+
                         // Add date cell var
-                        dateCell = document.createElement('div');
-                        dateCell.textContent = dayCount;
-                        dateCell.classList.add('date-cell');
+                        // dateCell = document.createElement('div');
+                        // dateCell.textContent = dayCount;
+                        // dateCell.classList.add('date-cell');
 
                         if (dayCount === new Date().getDate() && monthName === months[d.getMonth()] && currentYear == d.getFullYear()) {
-                            dateCell.classList.add('current-month'); // Highlight current date
-                        }
+                            // dateCell.append('current-month'); // Highlight current date
+                            $('.dates').append(dateDivData(dayCount, "current-month"))
+                        } else {
 
-                        datesContainer.appendChild(dateCell);
+                            $('.dates').append(dateDivData(dayCount));
+                        }
                         dayCount++;
                     }
                 }
