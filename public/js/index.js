@@ -70,7 +70,7 @@ function displayPost() {
 
 }
 
-//for displaying post on feed
+//for displaying post on feed 
 async function loadPost() {
     // console.log("new posts will be added");
     //loading will be started here CSS loading 
@@ -327,6 +327,7 @@ $(document).ready(function () {
 
     })
 
+    //* -----------Button and Div Click Section-----------------
 
     // for geting to post_form page (will be added to add post section on home page)
     $('.btn').click(function () {
@@ -346,7 +347,7 @@ $(document).ready(function () {
         });
     })
 
-
+    //habit button dynamically load users habits 
     $('.habit-btn').click(function () {
         console.log("habit button is pressed");
         $('.center-content').empty();
@@ -373,11 +374,66 @@ $(document).ready(function () {
 
     })
 
+    //home button on left sidebar to dynamically load home page
     $('.home-btn').click(function () {
         $('.center-content').empty();
         // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
         homeContent();
     })
+
+    // View-profile click event inside user-menu 
+    $('.view-profile').click(function () {
+        console.log("view profile button is clicked");
+        $('.center-content').empty();
+
+        // to get user_id in order to sent it backend API
+        // I have set data attribute to this element
+        // so we get user_id easily by
+        var userId = $(this).data('user-id');
+
+        console.log(userId);
+        $.ajax({
+            url: 'user_profile/' + userId,
+            type: 'GET',
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+        $.ajax({
+            url: 'get_post_of_user_id/' + userId,
+            type: 'GET',
+            data: 'html',
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+
+                console.log((response));
+                $('.center-content').append(response);
+
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+
+
+
+    })
+
 
     //! IMP discussion: As posts are added dynamically we cannot just add jquery to static DOM object
     //! we need to  need to use event delegation to ensure that the click event handler is attached to dynamically added elements

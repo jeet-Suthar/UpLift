@@ -47,7 +47,7 @@
 
 
                 <div class="user-reward">
-                    <img src="/uploads/assests/rewards/<?= $R['img'] ?>"></img>
+                    <img src="/uploads/assets/rewards/<?= $R['img'] ?>"></img>
                     <h3><?= $R['title'] ?><h3>
                             <div class="user-reward-tooltip">
                                 <span><?= $R['description'] ?></span>
@@ -63,5 +63,4 @@
         <h5 style="text-align: center; color:gray; margin-bottom: 70px;">No Rewards received yet!</h5>
     <?php endif; ?>
 
-    <?= $this->include('components/habits/habitCalendar') ?>
 </div>

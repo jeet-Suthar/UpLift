@@ -1,36 +1,47 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">UpLift</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="uploads/assets/site_images/UpLiftLogo1.jpg" alt="Logo" class="navbar-logo">
+    <h1 class="navbar-title">UpLift</h1>
+  </div>
+  <div class="navbar-right">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <div class="navbar-icons">
+      <div class="navbar-search-bar-container">
+        <input type="text" class="navbar-search-bar" placeholder="Search">
+        <i class="fas fa-search" style="margin-right: 10px; scale: 1.2;"></i>
+      </div>
+      <i class="fas fa-plus-circle" style=" margin-right: 10px; scale: 1.2"></i>
+      <i class="fas fa-bell" style=" margin-right: 10px; scale: 1.2"></i>
+    </div>
+
+    <div class="navbar-user-profile">
+      <img src="https://imgs.search.brave.com/JL450FeVqJkRZcjyHGo3sRtPWApzstz-CVUInXNumdU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNC8w/OS8xNy8xMS80Ny9t/YW4tNDQ5NDA2XzY0/MC5qcGc" class="user-profile-image" alt="User Profile">
+    </div>
+
+    <div class="user-menu">
+      <p class="view-profile" data-user-id="<?= session()->get('id') ?>">View Profile</p>
+      <hr>
+      <p class="settings">Settings</p>
+      <hr>
+      <p class="help">Help & Support</p>
+      <p class="feedback">Feedback</p>
+    </div>
   </div>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var userProfile = document.querySelector(".user-profile-image");
+    var userMenu = document.querySelector(".user-menu");
+
+    userProfile.addEventListener("click", function() {
+      userMenu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", function(event) {
+      if (!userProfile.contains(event.target)) {
+        userMenu.classList.remove("show");
+      }
+    });
+  });
+</script>

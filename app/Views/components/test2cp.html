@@ -4,136 +4,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rewards</title>
+    <title>Dark Theme Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            background-color: #121212;
-            color: #fff;
-            font-family: Arial, sans-serif;
-        }
-
-        .reward-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .reward {
-            width: 250px;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: #333;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            z-index: inherit;
-        }
-
-        .reward:hover {
-            background-color: #555;
-            transform: scale(1.05);
-        }
-
-        .reward img {
-            width: 120px;
-            height: 120px;
-            display: block;
-            margin: 0 auto 10px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .reward h3 {
-            text-align: center;
-            font-size: 18px;
             margin: 0;
-            transition: all 0.3s ease;
+            font-family: Arial, sans-serif;
+            background-color: #111;
         }
 
-        /* Tooltip */
-        .tooltip {
-            position: relative;
-            display: inline-block;
-        }
-
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: fit-content;
-            background-color: #555;
+        .navbar {
+            background-color: #222;
             color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 0;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            text-align: center;
-            margin-left: -80px;
-            opacity: 0;
-            transition: opacity 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
         }
 
-        .tooltip .tooltiptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #555 transparent transparent transparent;
+        .navbar-left {
+            display: flex;
+            align-items: center;
         }
 
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
+        .navbar-logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-title {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-icons i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .navbar-icons i:hover {
+            color: #bbb;
+        }
+
+        .navbar-search-bar-container {
+            position: relative;
+        }
+
+        .navbar-search-bar {
+            width: 0;
+            padding: 5px 30px 5px 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #333;
+            color: #fff;
+            transition: width 0.4s ease;
+            overflow: hidden;
+        }
+
+        .navbar-search-bar-container:hover .navbar-search-bar {
+            width: 150px;
+        }
+
+        .navbar-search-bar:focus {
+            width: 150px;
+        }
+
+        .user-profile-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .user-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            z-index: 999;
+        }
+
+        .user-menu p {
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        .user-menu p:hover {
+            color: #bbb;
         }
     </style>
 </head>
 
 <body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="reward-container">
-        <div class="reward tooltip">
-            <img src="https://picsum.photos/200" alt="Reward 1">
-            <h3>Reward 1</h3>
-            <span class="tooltiptext">Description for Reward 1.</span>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="uploads/assets/site_images/UpLiftLogo1.jpg" alt="Logo" class="navbar-logo">
+            <h1 class="navbar-title">UpLift</h1>
         </div>
-        <div class="reward tooltip">
-            <img src="https://picsum.photos/201" alt="Reward 2">
-            <h3>Reward 2</h3>
-            <span class="tooltiptext">Description for Reward 2.</span>
+        <div class="navbar-right">
+            <div class="navbar-icons">
+                <div class="navbar-search-bar-container">
+                    <input type="text" class="navbar-search-bar" placeholder="Search">
+                    <i class="fas fa-search"></i>
+                </div>
+                <i class="fas fa-plus-circle"></i>
+                <i class="fas fa-bell"></i>
+            </div>
+            <div class="navbar-user-profile">
+                <img src="https://imgs.search.brave.com/JL450FeVqJkRZcjyHGo3sRtPWApzstz-CVUInXNumdU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNC8w/OS8xNy8xMS80Ny9t/YW4tNDQ5NDA2XzY0/MC5qcGc"
+                    class="user-profile-image" alt="User Profile">
+                <div class="user-menu">
+                    <p>view profile</p>
+                    <p>settings</p>
+                    <p>logout</p>
+                </div>
+            </div>
         </div>
-        <div class="reward tooltip">
-            <img src="https://picsum.photos/202" alt="Reward 3">
-            <h3>Reward 3</h3>
-            <span class="tooltiptext">DescriptionDescriptionDescriptionDescriptionDescription for Reward 3.</span>
-        </div>
-        <div class="reward tooltip">
-            <img src="https://picsum.photos/202" alt="Reward 3">
-            <h3>Reward 3</h3>
-            <span class="tooltiptext">Description for Reward 3.</span>
-        </div>
-        <div class="reward tooltip">
-            <img src="https://picsum.photos/202" alt="Reward 3">
-            <h3>Reward 3</h3>
-            <span class="tooltiptext">Description for Reward 3.</span>
-        </div>
-        <div class="reward tooltip">
-            <img src="https://picsum.photos/202" alt="Reward 3">
-            <h3>Reward 3</h3>
-            <span class="tooltiptext">Description for Reward 3.</span>
-        </div>
-    </div>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var userProfile = document.querySelector(".user-profile-image");
+            var userMenu = document.querySelector(".user-menu");
+
+            userProfile.addEventListener("click", function () {
+                userMenu.classList.toggle("show");
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!userProfile.contains(event.target)) {
+                    userMenu.classList.remove("show");
+                }
+            });
+        });
+    </script>
 
 </body>
 

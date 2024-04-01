@@ -16,6 +16,8 @@ body {
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #3d3d3e rgb(40, 40, 40);
+    scroll-behavior: smooth;
+
 }
 
 /* 
@@ -761,22 +763,37 @@ hr {
     gap: 20px;
 }
 
+.habit-section {
+    background-color: rgb(35, 35, 35);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 150px;
+    /* border: 1px solid #495057; */
+
+}
+
 .habit-container {
     position: relative;
     width: 100%;
     height: 120px;
-    background-color: rgb(40, 40, 40);
+    background-color: #333;
 
-    border: 1px solid #495057;
+
+    /* border: 1px solid #495057;  */
     border-radius: 5px;
-    padding: 10px;
+    padding: 40px;
+
+}
+
+.habit-container:hover {
+    background-color: rgb(73, 73, 73);
 
 }
 
 .habit-name {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 15px;
     font-size: 20px;
     color: #fff;
 }
@@ -784,7 +801,7 @@ hr {
 .streak-count {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 15px;
     font-size: 18px;
     color: #fff;
 }
@@ -805,7 +822,7 @@ hr {
 .habit-description {
     position: absolute;
     top: 50px;
-    left: 10px;
+    left: 15px;
     color: gray;
     font-size: 14px;
     width: 70%;
@@ -888,5 +905,238 @@ hr {
     visibility: visible;
     opacity: 1;
     z-index: 10;
+
+}
+
+/** ----------User Profile Section--------------- */
+
+.user-profile {
+    position: relative;
+    /* max-width: 800px; */
+    /* Max width of the profile */
+    margin: 0 0 10px 0;
+    /* Center the profile */
+    padding: 20px 20px 0px;
+    background-color: rgb(40, 40, 40);
+    /* Dark background color */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+.user-profile-background-image {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    border-top-left-radius: 8px;
+    /* Rounded corners on top left */
+    border-top-right-radius: 8px;
+    /* Rounded corners on top right */
+
+    /* Behind other content */
+}
+
+.user-profile-background-image img {
+    width: 100%;
+    /* height: 200px; */
+    border-top-left-radius: 8px;
+    /* Rounded corners on top left */
+    border-top-right-radius: 8px;
+    /* Rounded corners on top right */
+    object-position: center;
+    object-fit: cover;
+
+}
+
+.user-profile-pic {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 150px;
+    /* Adjust as needed */
+    left: 13%;
+    transform: translateX(-50%);
+    border: 4px solid #FFFFFF;
+    /* White border around profile picture */
+    border-radius: 50%;
+    /* Circular shape */
+    object-fit: cover;
+    background-color: black;
+}
+
+.user-profile-info {
+    padding-top: 63px;
+    padding-left: 22px;
+}
+
+.user-profile-info>* {
+    margin-bottom: 15px;
+}
+
+.user-profile-name {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.user-profile-user-id {
+    color: #CCCCCC;
+    font-size: 15px;
+    /* Light gray color */
+}
+
+.user-profile-bio {
+    font-size: 15px;
+}
+
+.user-profile-follower-count,
+.user-profile-following-count {
+    font-size: 14px;
+    display: inline;
+    margin-right: 0px;
+}
+
+/* for edit Profile button */
+
+.edit-profile {
+    position: absolute;
+    right: 40px;
+    top: 240px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    background-color: rgb(83, 83, 83);
+
+    cursor: pointer;
+    user-select: none;
+
+
+}
+
+.edit-profile:hover {
+    background-color: #444;
+}
+
+/** -------Navbar Section--------- */
+.navbar {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px white solid;
+}
+
+.navbar-title {
+    margin: 0;
+    font-size: 20px;
+}
+
+.navbar-right {
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-user-profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 1.5px solid #FFFFFF;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.user-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    border-radius: 10px;
+    padding: 15px 0px;
+    background-color: #333;
+    color: #ffffff;
+    overflow: hidden;
+    visibility: hidden;
+
+}
+
+/* this following class is user by JS to show elements  */
+.show {
+    visibility: visible;
+}
+
+/* for p element inside user menu */
+.user-menu p {
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.user-menu p:hover {
+    color: #bbb;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons * {
+    cursor: pointer;
+}
+
+
+.navbar-icons *:hover {
+    color: #c5c5c5;
+
+}
+
+.navbar-search-bar-container {
+    position: relative;
+}
+
+.navbar-search-bar {
+    width: 0;
+    padding: 5px 10px;
+    margin-right: 7px;
+    border: none;
+    border-radius: 20px;
+    background-color: #333;
+    color: #ffffff;
+    transition: width 0.4s ease;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 14px;
+    height: 22px;
+}
+
+.navbar-search-bar-container:hover .navbar-search-bar {
+    width: 150px;
+    visibility: visible;
+    cursor: text;
+}
+
+.navbar-search-bar:focus {
+    width: 150px;
+    visibility: visible;
 
 }

@@ -22,6 +22,14 @@ class UsersModel extends Model
 
         return $query;
     }
+    public function getUserProfileInfo($userId)
+    {
+        $query = $this->select('user_id,fname,lname, username, profile_dp,bio,background_img', FALSE)
+            ->where('user_id', $userId)
+            ->first();
+
+        return $query;
+    }
 
     protected function beforeInsertPassword(array $data)
     {

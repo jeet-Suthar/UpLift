@@ -35,9 +35,13 @@ $routes->post('submitPost', 'UpliftController::submitPost');
 
 $routes->get('post', 'UpliftController::post');
 
-//for post using ajax
+//TODO----------------------POST SECTION------------------
+// post using ajax dynamically loaded on main feed (pagination)
 $routes->get('get_post/(:any)', 'PostController::get_post/$1');
 $routes->get('totalPost', 'PostController::totalPost');
+// for user Profile 
+$routes->get('get_post_of_user_id/(:num)', 'PostController::get_post_of_user_id/$1');
+
 
 //story controller
 $routes->post('add_stories', 'storiesController::add_stories');
@@ -50,6 +54,13 @@ $routes->get('getStoriesOfUser/(:num)', 'storiesController::getStoriesOfUser/$1'
 
 // habits section
 $routes->get('habit', 'HabitController::habit');
+
+
+
+//User Profile Section
+$routes->get('user_profile', 'UserProfileController::index');
+$routes->get('user_profile/(:num)', 'UserProfileController::user_profile/$1');
+
 
 
 
