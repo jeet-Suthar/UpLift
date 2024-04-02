@@ -62,6 +62,13 @@ $routes->get('user_profile', 'UserProfileController::index');
 $routes->get('user_profile/(:num)', 'UserProfileController::user_profile/$1');
 
 
+// friends section as follower following section
+$routes->get('find_friends/(:num)', 'FriendsController::find_friends/$1');
+$routes->get('find_friend_request_of/(:num)', 'FriendsController::find_friend_request_of/$1');
+$routes->get('find_request_not_accepted_of/(:num)', 'FriendsController::find_request_not_accepted_of/$1');
+$routes->get('find_followers_of_User/(:num)', 'FriendsController::find_followers_of_User/$1');
+$routes->get('find_followings_of_User/(:num)', 'FriendsController::find_followings_of_User/$1');
+
 
 
 

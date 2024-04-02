@@ -1,5 +1,3 @@
-<?= $this->include('template/header') ?>
-
 <div class="user-profile">
     <div class="user-profile-background-image">
         <img src="/uploads/assets/user/user_background_pic/<?= $profile_info['background_img'] ?>" alt="user-profile Background Image">
@@ -24,10 +22,11 @@
         <div class="user-profile-bio">
             <?= $profile_info["bio"] ?>
         </div>
-        <div class="user-profile-follower-count">
-            1000 Followers |
+        <div class="user-profile-follower-count" data-user-id="<?= $profile_info["user_id"] ?>"> <!--included user_id in order to make click function work -->
+            1000 Followers
         </div>
-        <div class="user-profile-following-count">
+        <span>|</span>
+        <div class="user-profile-following-count" data-user-id="<?= $profile_info["user_id"] ?>"> <!--  included user_id in order to make click function work -->
             500 Followings
         </div>
     </div>

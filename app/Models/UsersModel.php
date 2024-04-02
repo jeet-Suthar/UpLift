@@ -16,7 +16,7 @@ class UsersModel extends Model
     //getting user information just using userId variable
     public function getUserInfo($userId)
     {
-        $query = $this->select('fname,lname, username, profile_dp', FALSE)
+        $query = $this->select('user_id,fname,lname, username, profile_dp', FALSE)
             ->where('user_id', $userId)
             ->first();
 

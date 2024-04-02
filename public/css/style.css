@@ -17,6 +17,7 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #3d3d3e rgb(40, 40, 40);
     scroll-behavior: smooth;
+    box-sizing: border-box;
 
 }
 
@@ -998,6 +999,12 @@ hr {
     font-size: 14px;
     display: inline;
     margin-right: 0px;
+    cursor: pointer;
+}
+
+.user-profile-follower-count:hover,
+.user-profile-following-count:hover {
+    color: rgb(215, 215, 215);
 }
 
 /* for edit Profile button */
@@ -1139,4 +1146,88 @@ hr {
     width: 150px;
     visibility: visible;
 
+}
+
+/** -------------User Block Section-------------  */
+/* this will be use in followers, followings, explore i.e. seraching a user */
+
+.user-block-container {
+    /* width: 300px; */
+    background-color: #2b2b2b;
+    height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #3d3d3e rgb(40, 40, 40);
+    /* scrollbar-gutter: stable; */
+}
+
+
+.user-block-element {
+    position: relative;
+    background-color: #2b2b2b;
+    display: flex;
+    align-items: center;
+    border-bottom: #606060 1px solid;
+
+
+    padding: 0px 10px;
+}
+
+.user-block-element * {
+    cursor: pointer;
+}
+
+.user-block-element p {
+
+    font-size: 12px;
+    color: rgb(186, 183, 183);
+}
+
+.user-block-element h6 {
+    cursor: pointer;
+
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.user-block-element h6:hover {
+    text-decoration: underline;
+}
+
+/* accept btn  */
+.accept-btn {
+    background-color: #007bff;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.accept-btn:hover {
+    background-color: #3c99fc;
+}
+
+/** follower and following top section  */
+.follower-following-top-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: #2b2b2b;
+
+    /* Darker background color for top section */
+}
+
+.follower-following-back-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.follower-following-back-icon:hover {
+    color: rgb(183, 183, 183);
 }

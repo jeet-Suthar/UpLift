@@ -11,6 +11,9 @@ var positionInLatestStoriesArray;
 //for loading animation 
 var loadingAnimation = `<div id="loadingAnimation" class="loadingio-spinner-eclipse-f5f99z8brf4"><div class="ldio-rwa0xznz7l">
 <div></div></div></div>`;
+// var topSectionWithBackBtn = `<div class="follower-following-top-section">
+// <i class="fa-solid fa-angle-left follower-following-back-icon"></i>
+// </div>`;
 
 // for scroll 90% 
 function isScrollAtBottom() {
@@ -209,6 +212,54 @@ $(window).scroll(function () {
     }
 });
 
+//function for get user's profile
+function getProfileOfUserId(userId) {
+    $('.center-content').empty();
+    $('.center-content').append(loadingAnimation);
+
+    // gets users's profile wala section
+    $.ajax({
+        url: 'user_profile/' + userId,
+        type: 'GET',
+        async: 'true',
+        success: function (response) {
+            // Replace the existing content with the loaded form
+            // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+            $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+            $('.center-content').append(response);
+
+
+        },
+        error: function (error) {
+            // Handle errors, e.g., show an error message to the user
+            console.error('Error loading form:', error);
+        }
+    });
+
+    // gets post of that particular users
+    $.ajax({
+        url: 'get_post_of_user_id/' + userId,
+        type: 'GET',
+        data: 'html',
+        async: 'true',
+        success: function (response) {
+            // Replace the existing content with the loaded form
+            // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+
+            console.log((response));
+            $('.center-content').append(response);
+
+
+
+        },
+        error: function (error) {
+            // Handle errors, e.g., show an error message to the user
+            console.error('Error loading form:', error);
+        }
+    });
+}
+
 
 $(document).ready(function () {
 
@@ -384,21 +435,47 @@ $(document).ready(function () {
     // View-profile click event inside user-menu 
     $('.view-profile').click(function () {
         console.log("view profile button is clicked");
-        $('.center-content').empty();
+        // to get user_id in order to sent it backend API
+        // I have set data attribute to this element
+        // so we get user_id easily by
+        var userId = $(this).data('user-id');
+
+        getProfileOfUserId(userId);
+
+    })
+
+
+
+    //todo---------------------DYNAMICALLY ADDED BUTTON LOGIC---------------------
+
+
+
+    //! IMP discussion: As posts are added dynamically we cannot just add jquery to static DOM object
+    //! we need to  need to use event delegation to ensure that the click event handler is attached to dynamically added elements
+    // so following has to be done for every dynamically added element which want click function
+
+
+    //followers button click event
+    $(document).on('click', '.user-profile-follower-count', function () {
 
         // to get user_id in order to sent it backend API
         // I have set data attribute to this element
         // so we get user_id easily by
         var userId = $(this).data('user-id');
 
-        console.log(userId);
+        console.log("followers btn is clicked");
+        $('.center-content').empty();
+        $('.center-content').append(loadingAnimation);
+
+
         $.ajax({
-            url: 'user_profile/' + userId,
+            url: 'find_followers_of_User/' + userId,
             type: 'GET',
+
             success: function (response) {
                 // Replace the existing content with the loaded form
                 // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
-
+                $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
                 $('.center-content').append(response);
 
 
@@ -409,17 +486,30 @@ $(document).ready(function () {
             }
         });
 
+
+    })
+    // following btn click event
+    $(document).on('click', '.user-profile-following-count', function () {
+
+        // to get user_id in order to sent it backend API
+        // I have set data attribute to this element
+        // so we get user_id easily by
+        var userId = $(this).data('user-id');
+
+        console.log("followers btn is clicked");
+        $('.center-content').empty();
+        $('.center-content').append(loadingAnimation);
+
+
         $.ajax({
-            url: 'get_post_of_user_id/' + userId,
+            url: 'find_followings_of_User/' + userId,
             type: 'GET',
-            data: 'html',
+
             success: function (response) {
                 // Replace the existing content with the loaded form
                 // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
-
-                console.log((response));
+                $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
                 $('.center-content').append(response);
-
 
 
             },
@@ -428,16 +518,20 @@ $(document).ready(function () {
                 console.error('Error loading form:', error);
             }
         });
-
-
 
 
     })
 
+    $(document).on('click', '.user-block-element', function () {
+        var userId = $(this).data('user-id');
+        console.log(userId);
+        getProfileOfUserId(userId);
 
-    //! IMP discussion: As posts are added dynamically we cannot just add jquery to static DOM object
-    //! we need to  need to use event delegation to ensure that the click event handler is attached to dynamically added elements
-    // so following has to be done for every dynamically added element which want click function
+
+    });
+
+
+
 
     $(document).on('click', '.likeButton', function () {
         var postId = $(this).data('post-id');
