@@ -173,8 +173,8 @@ class UpliftController extends BaseController
     {
         return view('uplift');
     }
-    
-    public function post_form(): string
+
+    public function post_form_old(): string
     {
         return view('post_form');
     }
@@ -188,44 +188,44 @@ class UpliftController extends BaseController
 
         // Handle the form submission and file upload
         if ($this->request->is('post')) {
-            
+
 
             // Validate and handle file upload
             $mediaFile = $this->request->getFile('media');
 
 
-            
+
             echo "<br><br>";
 
-                echo "<pre>";
-                print_r($mediaFile);
-                echo "<br><br>";
-                print_r ($mediaFile->getMimeType());
-                echo "<br><br>";
-                
-                //for getting type of file (image/video
-                $temp= $mediaFile->getMimeType();
-                $temparray = explode("/",$temp);
-                $type=$temparray[0];
-                echo $type;
-                
-                echo "<br><br>";
-                $data = [
-                    'user_id' => session()->get('id'),
-                    'caption' => $this->request->getPost('caption'),
-                    'type' => $type,
-                ];
-            
+            echo "<pre>";
+            print_r($mediaFile);
+            echo "<br><br>";
+            print_r($mediaFile->getMimeType());
+            echo "<br><br>";
 
-            
+            //for getting type of file (image/video
+            $temp = $mediaFile->getMimeType();
+            $temparray = explode("/", $temp);
+            $type = $temparray[0];
+            echo $type;
+
+            echo "<br><br>";
+            $data = [
+                'user_id' => session()->get('id'),
+                'caption' => $this->request->getPost('caption'),
+                'type' => $type,
+            ];
+
+
+
 
             if ($mediaFile->isValid() && !$mediaFile->hasMoved()) {
                 $newName = $mediaFile->getRandomName();
-                $mediaFile->move('uploads/'.$type, $newName);
+                $mediaFile->move('uploads/' . $type, $newName);
                 $data['media_url'] = $newName;
             }
 
-           
+
             print_r($data);
 
             //for inserting data in database
@@ -236,16 +236,13 @@ class UpliftController extends BaseController
 
 
 
-            return redirect()->to(base_url('uplift'))->with('status','Post Uploaded !');
+            return redirect()->to(base_url('uplift'))->with('status', 'Post Uploaded !');
         }
-
-
-
     }
 
 
-    public function post() : string {
+    public function post(): string
+    {
         return view('components/post');
-        
     }
 }

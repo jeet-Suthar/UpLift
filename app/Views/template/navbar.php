@@ -10,7 +10,7 @@
         <input type="text" class="navbar-search-bar" placeholder="Search">
         <i class="fas fa-search" style="margin-right: 10px; scale: 1.2;"></i>
       </div>
-      <i class="fas fa-plus-circle" style=" margin-right: 10px; scale: 1.2"></i>
+      <i class="fas fa-plus-circle add-post-btn" style=" margin-right: 10px; scale: 1.2"></i>
       <i class="fas fa-bell" style=" margin-right: 10px; scale: 1.2"></i>
     </div>
 

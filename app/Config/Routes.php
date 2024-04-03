@@ -30,7 +30,7 @@ $routes->get('uplift', 'UpliftController::uplift');
 $routes->post('uplift', 'UpliftController::uplift');
 
 //for posts
-$routes->get('post_form', 'UpliftController::post_form');
+$routes->get('post_form_old', 'UpliftController::post_form_old');
 $routes->post('submitPost', 'UpliftController::submitPost');
 
 $routes->get('post', 'UpliftController::post');
@@ -68,6 +68,14 @@ $routes->get('find_friend_request_of/(:num)', 'FriendsController::find_friend_re
 $routes->get('find_request_not_accepted_of/(:num)', 'FriendsController::find_request_not_accepted_of/$1');
 $routes->get('find_followers_of_User/(:num)', 'FriendsController::find_followers_of_User/$1');
 $routes->get('find_followings_of_User/(:num)', 'FriendsController::find_followings_of_User/$1');
+
+//forms
+$routes->get('post_form', 'PostController::Post_form');
+
+
+
+// post submit 
+$routes->post('submit_post', 'PostController::submit_post');
 
 
 

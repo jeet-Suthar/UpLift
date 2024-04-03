@@ -1,9 +1,9 @@
 <?php if (isset($latestStories)) :
     foreach ($latestStories as $LS) : ?>
         <div class="story-container" data-user-id="<?= $LS['user_id'] ?>">
-            <div class="profile-picture">
+            <div class="story-profile-picture">
 
-                <img src="/uploads/image/<?= $LS['profile_dp'] ?>" alt=" Profile Picture">
+                <img src="/uploads/assets/user/user_pfp/<?= $LS['profile_dp'] ?>" alt=" Profile Picture">
 
                 <!-- <img src="https://via.placeholder.com/40" alt="Profile Picture"> -->
             </div>

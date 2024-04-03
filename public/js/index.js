@@ -11,10 +11,10 @@ var positionInLatestStoriesArray;
 //for loading animation 
 var loadingAnimation = `<div id="loadingAnimation" class="loadingio-spinner-eclipse-f5f99z8brf4"><div class="ldio-rwa0xznz7l">
 <div></div></div></div>`;
-// var topSectionWithBackBtn = `<div class="follower-following-top-section">
-// <i class="fa-solid fa-angle-left follower-following-back-icon"></i>
-// </div>`;
-
+var addStorySection = `<div class="add-story-section">
+<i class="fa-solid fa-plus"></i>
+<p>Add to story</p>
+</div>`
 // for scroll 90% 
 function isScrollAtBottom() {
     var scrollPosition = $(window).scrollTop();
@@ -139,6 +139,7 @@ async function homeContent() {
     $('.center-content').append('<div class="stories-section"></div>');
     $('.center-content').append('<div class="main-feed"></div>');
 
+    $('.stories-section').append(addStorySection);
     // to load post from database asyncronously 
     page = 1; // initial page 
     // $('.center-content').empty();
@@ -446,6 +447,8 @@ $(document).ready(function () {
 
 
 
+
+
     //todo---------------------DYNAMICALLY ADDED BUTTON LOGIC---------------------
 
 
@@ -522,13 +525,79 @@ $(document).ready(function () {
 
     })
 
+    // to get to user's profile 
     $(document).on('click', '.user-block-element', function () {
         var userId = $(this).data('user-id');
         console.log(userId);
         getProfileOfUserId(userId);
+    });
+    $(document).on('click', '.follower-following-back-icon', function () {
+        var userId = $(this).data('user-id');
+        console.log(userId);
+        getProfileOfUserId(userId);
+    });
 
+    // close the post form
+    $(document).on('click', '.dialog-box-close-btn', function () {
+        $('.dialog-box-bg').remove();
+    });
+
+
+    $(document).on('click', '.add-post-btn', function () {
+
+        $.ajax({
+            url: 'post_form',
+            type: 'GET',
+
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
 
     });
+
+    $(document).on('click', '.submit-post-btn', function () {
+
+        var formData = new FormData($('#post-form')[0]);
+        // You can append additional form data here if needed
+
+        // AJAX request to submit form data
+        $.ajax({
+            url: 'submit_post',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                // Handle successful response here if needed
+                console.log('Form submitted successfully');
+                $('.dialog-box-bg').remove();
+
+            },
+            error: function (xhr, status, error) {
+                // Handle error response here if needed
+                console.error('Form submission error:', error);
+            }
+        });
+    });
+
+    // verification section
+
+    $(document).on('click', '.verifier-btn', function () {
+        console.log("verifier btn pressed")
+    });
+
+
+
+
 
 
 

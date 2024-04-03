@@ -77,12 +77,12 @@ class FriendsController extends BaseController
         $data0['users'] = $friendModel->findFollowersOfUser($userId);
         // users array will have sub array as user_id becuase in database query we are selecting user_id 
 
-        $data['type'] = "topSectionNeeded";
+        $data['type'] = "follow";
 
-        // I have included below code so that we add request user_id inside data attribute of back button
-        // because by the end of code we are only getting of follower or following but who are they i.e. user_id stays inside api end only
-        // so explicity included it need of time
-        $data['pageOwnerUserId'] = $userId;
+        // this data2 array is send to topSectionOfFollow so that top bar can be displayed
+        $data2['pageOwnerUserId'] = $userId;
+        echo view("components/site_essentials/topSectionOfFollow.php", $data2);
+
 
 
         if (!empty($data0['users'])) {
@@ -108,13 +108,13 @@ class FriendsController extends BaseController
         $data0['users'] = $friendModel->findFollowingsOfUser($userId);
         // users array will have sub array as user_id becuase in database query we are selecting user_id 
 
-        $data['type'] = "topSectionNeeded";
+        $data['type'] = "follow";
 
 
-        // I have included below code so that we add request user_id inside data attribute of back button
-        // because by the end of code we are only getting of follower or following but who are they i.e. user_id stays inside api end only
-        // so explicity included it need of time
-        $data['pageOwnerUserId'] = $userId;
+        // this data2 array is send to topSectionOfFollow so that top bar can be displayed
+        $data2['pageOwnerUserId'] = $userId;
+        echo view("components/site_essentials/topSectionOfFollow.php", $data2);
+
 
         if (!empty($data0['users'])) {
             // for each user_id we have to fetch data of profile_info from user model

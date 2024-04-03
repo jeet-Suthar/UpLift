@@ -2,101 +2,107 @@
 <html lang="en">
 
 <head>
-    <!-- Design by foolishdeveloper.com -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure CSS Percentage Circle Demo</title>
-
-    <style media="screen">
-        @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300);
-
+    <title>Image Upload and Caption</title>
+    <style>
         body {
-            font-family: "Roboto", sans-serif;
-            background: #404040;
-
+            font-family: Arial, sans-serif;
+            background-color: #1f1f1f;
+            /* Dark background color */
+            color: #fff;
+            /* Light text color */
         }
 
-
-
-        .circle-wrap {
-            display: grid;
-            grid-template-columns: repeat(1, 160px);
-            grid-gap: 80px;
-            /* margin-top: 100px;
-            margin-left: 50px; */
-            width: 28px;
-            height: 28px;
-            background: #d9d7da;
-            border-radius: 50%;
-        }
-
-        .circle-wrap .circle .mask,
-        .circle-wrap .circle .fill {
-            width: 28px;
-            height: 28px;
-            position: absolute;
-            border-radius: 50%;
-        }
-
-        .circle-wrap .circle .mask {
-            clip: rect(0px, 28px, 28px, 14px);
-        }
-
-        .circle-wrap .inside-circle {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: #464646;
-            line-height: 22px;
+        .upload-container {
+            position: relative;
+            width: 300px;
+            margin: 50px auto;
             text-align: center;
-            margin-top: 2px;
-            margin-left: 2px;
-            color: white;
-            position: absolute;
-            z-index: 100;
-            /* font-weight: 700; */
-            font-size: 14px;
+            border: 2px dashed #ccc;
+            padding: 20px;
+            background-color: #333;
+            /* Darker background color */
         }
 
-        /* color animation */
-
-        .mask .fill {
-            clip: rect(0px, 14px, 28px, 0px);
-            background-color: #ec0c0c;
+        .upload-icon {
+            font-size: 48px;
+            color: #ccc;
+            margin-bottom: 20px;
         }
 
-        .mask.full,
-        .circle .fill {
-            /* animation: fill ease-in-out 3s; */
-            transform: rotate(90deg);
+        .media-preview {
+            position: relative;
+            margin-bottom: 20px;
         }
 
-        /* FORMULA for deg => (precentage * 1.8) */
+        .media-preview img {
+            max-width: 100%;
+            max-height: 200px;
+            margin-bottom: 10px;
+        }
 
-        /* 2nd bar */
+        .caption-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            font-size: 16px;
+            resize: none;
+            /* Prevent resizing of the text area */
+            /* Default border color */
+        }
+
+        .caption-input:focus {
+            border-color: #2e2e2e;
+
+            /* Dark grey border color when focused */
+        }
     </style>
 </head>
 
 <body>
 
-
-    <div class="circle-wrap">
-        <div class="circle">
-            <div class="mask full">
-                <div class="fill"></div>
-            </div>
-            <div class="mask half">
-                <div class="fill"></div>
-            </div>
-            <div class="inside-circle">1</div>
-        </div>
+    <div class="upload-container">
+        <div class="media-preview" id="media-preview"></div>
+        <input type="file" id="media-upload" accept="image/*,">
+        <textarea id="caption-input" class="caption-input" placeholder="Write a caption..."></textarea>
     </div>
 
+    <script>
+        document.getElementById('media-upload').addEventListener('change', function (event) {
+            var preview = document.getElementById('media-preview');
+            preview.innerHTML = '';
 
+            var file = event.target.files[0];
+            var reader = new FileReader();
 
+            reader.onload = function (event) {
+                var image = new Image();
+                image.src = event.target.result;
+                preview.appendChild(image);
+            }
 
+            reader.readAsDataURL(file);
+        });
 
+        document.getElementById('caption-input').addEventListener('input', function (event) {
+            var input = event.target;
+            input.style.height = 'auto'; // Reset the height to auto
+            input.style.height = input.scrollHeight + 'px'; // Set the height based on content
+        });
+
+        document.getElementById('caption-input').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent the default Enter behavior (inserting a new line)
+                var input = event.target;
+                input.value += '\n'; // Append a newline character to the input value
+                input.style.height = 'auto'; // Reset the height to auto
+                input.style.height = input.scrollHeight + 'px'; // Set the height based on content
+            }
+        });
+    </script>
 
 </body>
 

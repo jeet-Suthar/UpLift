@@ -4,6 +4,7 @@
             It's 29 March
         </h1>
     </div>
+    <i class="fa-solid fa-user-check verifier-btn"></i>
     <div class="habit-separator mb-3 mt-3">
         <h4>Habits</h4>
         <hr>

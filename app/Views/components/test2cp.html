@@ -1,161 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Theme Navbar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-        }
-
-        .navbar {
-            background-color: #222;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-
-        .navbar-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-logo {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .navbar-title {
-            margin: 0;
-            font-size: 20px;
-        }
-
-        .navbar-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-icons {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-icons i {
-            font-size: 20px;
-            margin-right: 10px;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        .navbar-icons i:hover {
-            color: #bbb;
-        }
-
-        .navbar-search-bar-container {
+        .tooltip {
             position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
         }
 
-        .navbar-search-bar {
-            width: 0;
-            padding: 5px 30px 5px 10px;
-            border: none;
-            border-radius: 20px;
-            background-color: #333;
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
             color: #fff;
-            transition: width 0.4s ease;
-            overflow: hidden;
-        }
-
-        .navbar-search-bar-container:hover .navbar-search-bar {
-            width: 150px;
-        }
-
-        .navbar-search-bar:focus {
-            width: 150px;
-        }
-
-        .user-profile-image {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .user-menu {
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
             position: absolute;
-            top: calc(100% + 10px);
-            right: 0;
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            display: none;
-            z-index: 999;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            transition: visibility 0.5s ease;
         }
 
-        .user-menu p {
-            margin: 5px 0;
-            cursor: pointer;
-        }
-
-        .user-menu p:hover {
-            color: #bbb;
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
         }
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="navbar-left">
-            <img src="uploads/assets/site_images/UpLiftLogo1.jpg" alt="Logo" class="navbar-logo">
-            <h1 class="navbar-title">UpLift</h1>
-        </div>
-        <div class="navbar-right">
-            <div class="navbar-icons">
-                <div class="navbar-search-bar-container">
-                    <input type="text" class="navbar-search-bar" placeholder="Search">
-                    <i class="fas fa-search"></i>
-                </div>
-                <i class="fas fa-plus-circle"></i>
-                <i class="fas fa-bell"></i>
-            </div>
-            <div class="navbar-user-profile">
-                <img src="https://imgs.search.brave.com/JL450FeVqJkRZcjyHGo3sRtPWApzstz-CVUInXNumdU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNC8w/OS8xNy8xMS80Ny9t/YW4tNDQ5NDA2XzY0/MC5qcGc"
-                    class="user-profile-image" alt="User Profile">
-                <div class="user-menu">
-                    <p>view profile</p>
-                    <p>settings</p>
-                    <p>logout</p>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <h2>Hover Text</h2>
+    <p>Move the mouse over the text below:</p>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var userProfile = document.querySelector(".user-profile-image");
-            var userMenu = document.querySelector(".user-menu");
-
-            userProfile.addEventListener("click", function () {
-                userMenu.classList.toggle("show");
-            });
-
-            document.addEventListener("click", function (event) {
-                if (!userProfile.contains(event.target)) {
-                    userMenu.classList.remove("show");
-                }
-            });
-        });
-    </script>
+    <div class="tooltip">Hover over me
+        <span class="tooltiptext">Tooltip text</span>
+    </div>
 
 </body>
 

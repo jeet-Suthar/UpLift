@@ -63,6 +63,23 @@ class FriendsModel extends Model
         return $query->getResultArray(); //notice here we use getResultArray() function to get result in form of array
     }
 
+    public function followerCount($userId)
+    {
+        $query = $this->query('SELECT COUNT(user_id)
+                                FROM friends 
+                                WHERE friend_id=?;', [$userId]); // Replace $user_id with the user ID you want to find friend of
+
+        return $query->getResultArray(); //notice here we use getResultArray() function to get result in form of array
+    }
+    public function followingCount($userId)
+    {
+        $query = $this->query('SELECT COUNT(friend_id) 
+                                FROM friends 
+                                WHERE user_id=?;', [$userId]); // Replace $user_id with the user ID you want to find friend of
+
+        return $query->getResultArray(); //notice here we use getResultArray() function to get result in form of array
+    }
+
 
     // // Dates
     // protected $useTimestamps = false;

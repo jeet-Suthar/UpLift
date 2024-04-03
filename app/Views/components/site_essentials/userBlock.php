@@ -3,11 +3,7 @@
     <!-- //! OR ELSE IT WILL NOT WORK -->
 
     <!-- following section checks type sub array whether it is from followers or followings request page -->
-    <?php if ($type == "topSectionNeeded") : ?>
-        <div class="follower-following-top-section">
-            <i class="fa-solid fa-angle-left follower-following-back-icon" data-user-id="<?= $pageOwnerUserId ?>"></i>
-        </div>
-    <?php endif; ?>
+
 
 
     <div class=" user-block-container">

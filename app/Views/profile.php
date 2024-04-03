@@ -23,11 +23,13 @@
             <?= $profile_info["bio"] ?>
         </div>
         <div class="user-profile-follower-count" data-user-id="<?= $profile_info["user_id"] ?>"> <!--included user_id in order to make click function work -->
-            1000 Followers
+            <!-- here as result is return fromm DB in form of array with 0 indiex have count variable bcoz -->
+            <!-- we have count query executed that why we goind in 0th index and in displaying value of count -->
+            <?= $followerCount[0]['count'] ?> Followers
         </div>
         <span>|</span>
         <div class="user-profile-following-count" data-user-id="<?= $profile_info["user_id"] ?>"> <!--  included user_id in order to make click function work -->
-            500 Followings
+            <?= $followingCount[0]['count'] ?> Followings
         </div>
     </div>
     <hr class="mt-4">

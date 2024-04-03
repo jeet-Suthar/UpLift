@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\models\PostSummaryModel;
 use App\models\CommentsModel;
+use App\Models\PostsModel;
+
 
 
 class PostController extends BaseController
@@ -95,5 +97,43 @@ class PostController extends BaseController
         }
 
         echo view('components/post', $data);
+    }
+
+    public function post_form()
+    {
+        echo view("components/habits/postForm");
+    }
+
+    public function submit_post()
+    {
+        if ($this->request->is('post')) {
+
+
+            // Validate and handle file upload
+            $mediaFile = $this->request->getFile('media');
+
+
+            //for getting type of file (image/video
+
+            $temp = $mediaFile->getMimeType();
+            $temparray = explode("/", $temp);
+            $type = $temparray[0];
+            echo $type;
+
+            $data = [
+                'user_id' => session()->get('id'),
+                'caption' => $this->request->getPost('caption'),
+                'type' => $type,
+            ];
+
+            if ($mediaFile->isValid() && !$mediaFile->hasMoved()) {
+                $newName = $mediaFile->getRandomName();
+                $mediaFile->move('uploads/' . $type, $newName);
+                $data['media_url'] = $newName;
+            }
+
+            $model = new PostsModel();
+            $model->save($data);
+        }
     }
 }

@@ -37,7 +37,7 @@ if (isset($post_data)) :
             <!-- User Profile Section -->
             <div class="post-info">
 
-                <img src="/uploads/image/<?= $PD['profile_dp'] ?>" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40" 3>
+                <img src="/uploads/assets/user/user_pfp/<?= $PD['profile_dp'] ?>" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
 
                 <div class=" mt-2">
                     <h6><?= $PD['username'] ?></h6>
