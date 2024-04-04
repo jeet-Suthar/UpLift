@@ -11,7 +11,7 @@
             <div class="upload-container">
                 <div class="media-preview" id="media-preview"></div>
 
-                <form id="post-form" action="submit_post" method="post" enctype="multipart/form-data">
+                <form id="habit-validate-form" action="submit_post" method="post" enctype="multipart/form-data">
 
                     <div id="upload-group">
                         <input type="file" id="media-upload" name="media" accept="image/*, video/*">
@@ -19,7 +19,7 @@
                         <p style="color: #808080;">Upload Image/video</p>
 
                     </div>
-                    <textarea id="caption-input" name="caption" class="caption-input" placeholder="Write a caption..."></textarea>
+                    <!-- <textarea id="caption-input" name="caption" class="caption-input" placeholder="Write a caption..."></textarea> -->
                 </form>
                 <!-- <button type="submit" class="submit-btn"><i class="fas fa-upload"></i> Submit</button> -->
             </div>
@@ -69,12 +69,12 @@
         </div>
 
         <div class="dialog-box-footer" id="dialog-box-button">
-            <div class="dialog-box-button submit-post-btn">
-                Post <i class="fas fa-upload"></i>
+            <div class="dialog-box-button habit-sent-btn" data-habit-id="1">
+                Send <i class="fas fa-upload"></i>
             </div>
         </div>
 
 
-    </div>/
+    </div>
 
 </div>

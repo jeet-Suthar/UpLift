@@ -54,6 +54,17 @@ $routes->get('getStoriesOfUser/(:num)', 'storiesController::getStoriesOfUser/$1'
 
 // habits section
 $routes->get('habit', 'HabitController::habit');
+$routes->get('verifier_dialog', 'HabitController::verifier_dialog');
+$routes->get('get_verifiers_of/(:num)', 'HabitController::get_verifiers_of/$1');
+// habit sent to verifier
+$routes->post('habit_sent', 'HabitController::habit_sent');
+
+
+// following will get those verifier who are friends but not in current verifier list
+$routes->get('new_verifier', 'HabitController::new_verifier');
+// post method to remove verifiers
+$routes->post('remove_verifier', 'HabitController::remove_verifier');
+$routes->post('add_verifier', 'HabitController::add_verifier');
 
 
 

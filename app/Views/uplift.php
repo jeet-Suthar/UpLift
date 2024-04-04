@@ -52,6 +52,7 @@
             <!-- stories-section div will added here dynamically -->
 
             <!-- main-feed div will added here dynamically -->
+            <?= $this->include('components/habits/habitValidate') ?>
 
         </div>
 

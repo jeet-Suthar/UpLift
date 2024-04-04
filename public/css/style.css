@@ -328,7 +328,7 @@ for home page
 }
 
 
-#story-close-button {
+#storya-button {
     position: absolute;
     top: 10px;
     right: -20px;
@@ -749,6 +749,7 @@ hr {
     padding: 10px 20px;
     border-radius: 10px;
     margin-bottom: 150px;
+
     /* border: 1px solid #495057; */
 
 }
@@ -1073,6 +1074,10 @@ hr {
     visibility: visible;
 }
 
+.display {
+    display: block;
+}
+
 /* for p element inside user menu */
 .user-menu p {
     margin: 5px 10px;
@@ -1133,13 +1138,10 @@ hr {
 /* this will be use in followers, followings, explore i.e. seraching a user */
 
 .user-block-container {
-    /* width: 300px; */
     background-color: #2b2b2b;
-    height: 300px;
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: #3d3d3e rgb(40, 40, 40);
-    /* scrollbar-gutter: stable; */
+    /* overflow-y: scroll; */
+    /* scrollbar-width: thin; */
+    /* scrollbar-color: #3d3d3e rgb(40, 40, 40); */
 }
 
 
@@ -1150,8 +1152,9 @@ hr {
     align-items: center;
     border-bottom: #606060 1px solid;
 
-
+    transition: background-color 0.3s ease-out;
     padding: 0px 10px;
+    margin: 3px 0px;
 }
 
 .user-block-element * {
@@ -1227,7 +1230,6 @@ hr {
     /* background-color: rgba(0, 0, 0, 0.3); */
     backdrop-filter: blur(15px);
     z-index: 9999;
-    overflow-y: scroll;
 
 }
 
@@ -1265,18 +1267,29 @@ hr {
 
 .dialog-box-footer {
     position: relative;
+    display: flex;
+    padding: 10px 0px 0px;
 }
 
 .dialog-box-button {
     margin-left: auto;
     width: fit-content;
-    padding: 8px 12px;
+    padding: 5px 8px;
 
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+}
+
+.dialog-box-button:hover {
+    background-color: #469fff;
+}
+
+.dialog-box-content {
+    position: relative;
+    padding: 10px 10px;
 }
 
 /* ---------------------------------------------------- */
@@ -1309,7 +1322,7 @@ hr {
 .media-preview img,
 .media-preview video {
     max-width: 100%;
-    max-height: 900px;
+    max-height: 450px;
 }
 
 .remove-icon {
@@ -1381,7 +1394,7 @@ hr {
     margin: 10px;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 9px 8px 40px rgb(0, 0, 0);
+    box-shadow: 6px 8px 23px rgb(27 27 27);
 
 }
 
@@ -1407,4 +1420,177 @@ hr {
 
 .verifier-btn:hover {
     color: rgb(187, 187, 187);
+}
+
+
+
+
+
+.verifier-section {
+    display: flex;
+    height: 50vh;
+    transition: width 1s ease;
+
+}
+
+.current-verifier-section {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    min-width: 300px
+}
+
+.current-verifier-section .user-block-element {
+    border-radius: 15px;
+}
+
+.verifier-box-horizontal-line {
+    display: none;
+    width: 1px;
+    height: 100%;
+    margin: 0px 15px;
+    /* Adjust height as needed */
+    background-color: rgb(111, 111, 111);
+    position: relative;
+}
+
+.verifier-box-horizontal-line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(128, 128, 128);
+}
+
+.add-verifier-section {
+    display: none;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    min-width: 300px
+}
+
+.verifier-edit-btn {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.remove-verifier-cross {
+    visibility: hidden;
+    font-size: 17px;
+    color: white;
+    position: absolute;
+    top: 34%;
+    right: 20px;
+}
+
+.remove-verifier-cross:hover {
+    color: rgb(255, 119, 119);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+
+.add-verifier-plus {
+    font-size: 17px;
+    color: white;
+    position: absolute;
+    top: 34%;
+    right: 20px;
+}
+
+.add-verifier-plus:hover {
+    color: rgb(104, 163, 52);
+    transition: transform 0.3s ease-in-out;
+    /* Apply transition for smooth animation */
+}
+
+
+
+.add-selected-verifier {
+    background-color: #1e5226;
+    border-radius: 15px;
+    border: 1px white solid;
+}
+
+.rotate45-add {
+    transform: rotate(45deg);
+    /* Apply rotation by 90 degrees */
+}
+
+.rotate45-add:hover {
+    color: #ff5252
+}
+
+.remove-selected-verifier {
+    background-color: #a1423c;
+    border-radius: 15px;
+    border: 1px white solid;
+}
+
+.rotate45-remove {
+    transform: rotate(45deg);
+    /* Apply rotation by 90 degrees */
+}
+
+.rotate45-remove:hover {
+    color: #38a80c
+}
+
+
+.verifier-cancel-btn {
+    display: none;
+
+    margin-left: 10px;
+    background-color: rgb(104, 104, 104);
+}
+
+.verifier-done-btn {
+    display: none;
+}
+
+.verifier-cancel-btn:hover {
+    background-color: #838383;
+}
+
+/**-----------menu ----------- */
+
+/* this will be universal for all menu blocks */
+
+.menu-container {
+    position: relative;
+    text-align: right;
+    /*! DON't change this! it's basically make icon to go right side. so by changeing it you may break all menu icon placement */
+}
+
+.menu-icon {
+    font-size: 17px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    text-align: left;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    /* Darker background color */
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 9999;
+    /* Initially hide the menu */
+}
+
+.menu-item {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    color: rgb(170, 170, 170);
 }

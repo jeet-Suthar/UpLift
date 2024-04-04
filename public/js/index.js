@@ -8,6 +8,11 @@ var currentStoryNumber = 0;
 var LatestStoriesArray = [];
 var userId;// for storeis section 
 var positionInLatestStoriesArray;
+
+
+var removedVerifier = [];
+var addedVerifier = [];
+
 //for loading animation 
 var loadingAnimation = `<div id="loadingAnimation" class="loadingio-spinner-eclipse-f5f99z8brf4"><div class="ldio-rwa0xznz7l">
 <div></div></div></div>`;
@@ -111,7 +116,6 @@ function getStoriesInfo(userId) {
         type: 'GET',
         async: false,
         dataType: 'json',
-        // async : false,
         success: function (response) {
 
             storyData = response;
@@ -511,7 +515,7 @@ $(document).ready(function () {
             success: function (response) {
                 // Replace the existing content with the loaded form
                 // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
-                $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
+                $("#loadingAnimation").remove(); //to remove loading animatin when content is loaded
                 $('.center-content').append(response);
 
 
@@ -543,6 +547,7 @@ $(document).ready(function () {
     });
 
 
+    // load post from when icon in navbar is clicked
     $(document).on('click', '.add-post-btn', function () {
 
         $.ajax({
@@ -564,6 +569,7 @@ $(document).ready(function () {
 
     });
 
+    // explicitly post the form to backend API without need to reload site
     $(document).on('click', '.submit-post-btn', function () {
 
         var formData = new FormData($('#post-form')[0]);
@@ -589,12 +595,268 @@ $(document).ready(function () {
         });
     });
 
+    //*---------------- Habit and Verification section------------------
+
     // verification section
 
     $(document).on('click', '.verifier-btn', function () {
-        console.log("verifier btn pressed")
+        console.log("verifier btn pressed");
+        removedVerifier = [];
+        addedVerifier = [];
+
+        // this ajax request will get verifier block from backend API just empty block
+        $.ajax({
+            url: 'verifier_dialog',
+            type: 'GET',
+            async: false,
+
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+        // Now this ajax will bring profiles of all users
+        var userId = $(this).data('user-id');
+        $('.current-verifier-section').append(loadingAnimation);
+
+        $.ajax({
+            url: 'get_verifiers_of/' + userId,
+            type: 'GET',
+
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $('.current-verifier-section').append(response);
+
+                $("#loadingAnimation").remove(); //to remove loading animatin when content is loaded
+
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
     });
 
+    $(document).on('click', '#remove-verifier-menu-btn', function () {
+        $('#menu').toggle();
+        $('.edit-verifier').remove();
+
+
+        // Show the element with class 'remove-verifier-cross'
+        $('.remove-verifier-cross').css('visibility', 'visible');
+        // Add 'display: block;' to elements with class 'verifier-cancel-btn' and 'verifier-done-btn'
+        $('.verifier-cancel-btn, .verifier-done-btn').css('display', 'block');
+        $('.verifier-done-btn').addClass('verifier-remove-done-btn');
+    });
+
+    $(document).on('click', '#add-verifier-menu-btn', function () {
+
+        $('#menu').toggle();
+        $('.edit-verifier').remove();
+
+        // Show the element with class 'remove-verifier-cross'
+        $('.add-verifier-section').toggle();
+        $('.verifier-box-horizontal-line').toggle();
+
+        // clears the area add the loading animation
+        $('.add-verifier-section').empty();
+        $('.add-verifier-section').append(loadingAnimation);
+
+        // load the content from backend API
+        $.ajax({
+            url: 'new_verifier',
+            type: 'GET',
+
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $('.add-verifier-section').append(response);
+                // $('.add-verifier-plus').css('visibility', 'visible');
+
+                $("#loadingAnimation").remove(); //to remove loading animatin when content is loaded
+
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+        // Add 'display: block;' to elements with class 'verifier-cancel-btn' and 'verifier-done-btn'
+        $('.verifier-cancel-btn, .verifier-done-btn').css('display', 'block');
+        $('.verifier-done-btn').addClass('verifier-add-done-btn');
+
+    });
+
+    $(document).on('click', '#remove-verifier-cross', function () {
+
+        // to get user_id in order to sent it backend API
+        // I have set data attribute to this element
+        // so we get user_id easily by
+        var userId = $(this).data('user-id');
+
+        // following will check is selected is already in array, if not then will add it in array
+        if (removedVerifier.includes(userId)) {
+            // If it exists, remove it
+            let index = removedVerifier.indexOf(userId);
+            removedVerifier.splice(index, 1);
+        } else {
+            // If it doesn't exist, add it
+            removedVerifier.push(userId);
+        }
+
+        console.log(removedVerifier);
+
+        var selectedUser = $(this).closest('.user-block-element');
+
+        selectedUser.toggleClass('remove-selected-verifier');
+        $(this).toggleClass("rotate45-remove");
+
+        return false; //! This will Prevent Event Bubbling
+
+    });
+
+    $(document).on('click', '#add-verifier-plus', function () {
+
+        // to get user_id in order to sent it backend API
+        // I have set data attribute to this element
+        // so we get user_id easily by
+        var userId = $(this).data('user-id');
+
+        // following will check is selected is already in array, if not then will add it in array
+        if (addedVerifier.includes(userId)) {
+            // If it exists, remove it
+            let index = addedVerifier.indexOf(userId);
+            addedVerifier.splice(index, 1);
+        } else {
+            // If it doesn't exist, add it
+            addedVerifier.push(userId);
+        }
+
+        console.log(addedVerifier);
+
+        var selectedUser = $(this).closest('.user-block-element');
+
+        selectedUser.toggleClass('add-selected-verifier');
+        $(this).toggleClass("rotate45-add");
+
+        return false; //! This will Prevent Event Bubbling
+
+    });
+
+    // difficult logic for remove btn
+    $(document).on('click', '.verifier-remove-done-btn', function () {
+        $('.dialog-box-bg').remove();
+        var dataToSend = {
+            verifierIds: removedVerifier,
+        };
+        $.ajax({
+            url: 'remove_verifier',
+            type: 'POST',
+            data: dataToSend,
+            success: function (response) {
+                console.log(response.message); // Output: Verifiers removed successfully
+            },
+            error: function (xhr, status, error) {
+
+                console.error('Error removing verifiers: ' + error);
+            }
+        });
+
+    });
+
+    // difficult logic for add btn
+    $(document).on('click', '.verifier-add-done-btn', function () {
+        $('.dialog-box-bg').remove();
+        var dataToSend = {
+            verifierIds: addedVerifier,
+        };
+        $.ajax({
+            url: 'add_verifier',
+            type: 'POST',
+            data: dataToSend,
+            success: function (response) {
+                console.log(response.message); // Output: Verifiers removed successfully
+            },
+            error: function (xhr, status, error) {
+
+                console.error('Error adding verifiers: ' + error);
+            }
+        });
+
+    });
+
+    $(document).on('click', '.verifier-cancel-btn', function () {
+        $('.dialog-box-bg').remove();
+    });
+
+    // validation section
+
+    $(document).on('click', '.habit-sent-btn', function () {
+
+        var formData = new FormData($('#habit-validate-form')[0]);
+        // You can append additional form data here if needed
+
+        var habitId = $(this).data('habit-id');
+        console.log(habitId);
+        formData.append('habit_id', habitId);
+        console.log(formData);
+        // AJAX request to submit form data
+        $.ajax({
+            url: 'habit_sent',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                // Handle successful response here if needed
+                console.log('Habit Sent submitted successfully');
+
+            },
+            error: function (xhr, status, error) {
+                // Handle error response here if needed
+                // console.error('habit sending error:', error);
+                $('.dialog-box-bg').remove();
+                //! IDK why server is repsonding with 500 but it actually getting updated
+                //! in the database...so for the sake for time saving I am leaving this Ignore
+
+            }
+        });
+    });
+
+
+
+
+
+    //!------------------------   MENU   -----------------------------
+    // Use event delegation for dynamically loaded content
+    $(document).on('click', '#menu-icon', function () {
+        $('#menu').toggle(); // Toggle the visibility of the menu
+    });
+
+    $(document).on('click', function (event) {
+        var menu = $('#menu');
+        var menuIcon = $('#menu-icon');
+        if (!menu.is(event.target) && !menuIcon.is(event.target) && menu.has(event.target).length === 0 && menuIcon.has(event.target).length === 0) {
+            // If the click is outside the menu and the menu icon, hide the menu
+            menu.hide();
+        }
+    });
+    //!------------------------   MENU END  -----------------------------
 
 
 

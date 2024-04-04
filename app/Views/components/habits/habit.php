@@ -4,7 +4,7 @@
             It's 29 March
         </h1>
     </div>
-    <i class="fa-solid fa-user-check verifier-btn"></i>
+    <i class="fa-solid fa-user-check verifier-btn" data-user-id="<?= session()->get('id') ?>"></i>
     <div class="habit-separator mb-3 mt-3">
         <h4>Habits</h4>
         <hr>
@@ -25,7 +25,7 @@
                     <div class="habit-description">
                         <?= $H['description'] ?>
                     </div>
-                    <button class="validate-button">Validate</button>
+                    <button class="validate-button" data-habit-id="<?= $H['habit_id'] ?>">Validate</button>
                 </div>
 
             <?php endforeach; ?>

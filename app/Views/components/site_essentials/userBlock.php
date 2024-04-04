@@ -18,6 +18,13 @@
                     <p>@<?= $PI['username'] ?></p>
                     <?php if ($type == "request") : ?>
                         <span class="accept-btn">Accept <i class="fa-solid fa-check"></i></span>
+                    <?php elseif ($type == "verifier") : ?>
+                        <i id="remove-verifier-cross" class="remove-verifier-cross fa-solid fa-xmark" data-user-id="<?= $PI['user_id'] ?>"></i>
+
+                    <?php elseif ($type == "newVerifier") : ?>
+                        <i id="add-verifier-plus" class="add-verifier-plus fa-solid fa-plus" data-user-id="<?= $PI['user_id'] ?>"></i>
+
+
                     <?php endif; ?>
                 </div>
             </div>
