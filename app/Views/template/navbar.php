@@ -1,6 +1,6 @@
 <nav class="navbar">
   <div class="navbar-left">
-    <img src="uploads/assets/site_images/UpLiftLogo1.jpg" alt="Logo" class="navbar-logo">
+    <img src="uploads/assets/site_images/UpLiftLogo2.png" alt="Logo" class="navbar-logo">
     <h1 class="navbar-title">UpLift</h1>
   </div>
   <div class="navbar-right">

@@ -84,8 +84,14 @@ class HabitsModel extends Model
 
     }
 
-    public function updateStatus($sentTime, $status)
+    public function updateStatus($sentTime)
     {
+
+        $query = $this->query('UPDATE verification_tasks
+        SET task_status = true
+        WHERE sent_time = ?;', [$sentTime]); // Replace $user_id with the user ID you want to find friend of
+
+
     }
 
 

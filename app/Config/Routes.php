@@ -85,6 +85,7 @@ $routes->get('user_profile/(:num)', 'UserProfileController::user_profile/$1');
 
 // friends section as follower following section
 $routes->get('find_friends/(:num)', 'FriendsController::find_friends/$1');
+$routes->get('find_friends_of_owner', 'FriendsController::find_friends_of_owner');
 $routes->get('find_friend_request_of/(:num)', 'FriendsController::find_friend_request_of/$1');
 $routes->get('find_request_not_accepted_of/(:num)', 'FriendsController::find_request_not_accepted_of/$1');
 $routes->get('find_followers_of_User/(:num)', 'FriendsController::find_followers_of_User/$1');
@@ -97,6 +98,15 @@ $routes->get('post_form', 'PostController::Post_form');
 
 // post submit 
 $routes->post('submit_post', 'PostController::submit_post');
+
+
+// CHAT SECTION
+$routes->get('chat', 'ChatsController::chat');
+$routes->get('chat_box', 'ChatsController::chat_box');
+$routes->get('get_chats_of/(:num)', 'ChatsController::get_chats_of/$1');
+$routes->post('send_message', 'ChatsController::send_message');
+
+
 
 
 

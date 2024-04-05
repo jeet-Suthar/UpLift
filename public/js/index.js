@@ -28,7 +28,7 @@ function isScrollAtBottom() {
     var windowHeight = $(window).height();
     var documentHeight = $(document).height();
     var scrollPercentage = (scrollPosition / (documentHeight - windowHeight)) * 100;
-    return scrollPercentage >= 95;
+    return scrollPercentage >= 85;
 }
 
 function displayPost() {
@@ -140,16 +140,12 @@ function storiesReplacment() {
         $(".progress-bar-section").append('<div class="progress-bar bar-' + i + '"></div>')
     }
 }
-async function homeContent() {
 
-    $('.center-content').append('<div class="stories-section"></div>');
-    $('.center-content').append('<div class="main-feed"></div>');
-
+function loadVerification() {
     // adding verification task to right sidebar
+
     $('.verification-section').empty();
     $('.verification-section').append(loadingAnimation);
-
-
 
     $.ajax({
         url: 'get_verification_task',
@@ -168,7 +164,13 @@ async function homeContent() {
     });
 
 
+}
+async function homeContent() {
 
+    $('.center-content').append('<div class="stories-section"></div>');
+    $('.center-content').append('<div class="main-feed"></div>');
+
+    loadVerification();
     $('.stories-section').append(addStorySection);
     // to load post from database asyncronously 
     page = 1; // initial page 
@@ -320,6 +322,7 @@ $(document).ready(function () {
 
 
     homeContent();      //it will load main content in home
+
     //stories dialog box click event
     $(document).on('click', '.story-container', function () {
         console.log("story is pressed");
@@ -476,6 +479,59 @@ $(document).ready(function () {
                 console.error('Error loading form:', error);
             }
         });
+
+
+
+    })
+
+    $('.message-btn').click(function () {
+        console.log("message button is pressed");
+        $('.center-content').empty();
+
+        //getting chat template
+        $.ajax({
+            url: 'chat',
+            type: 'GET',
+            async: 'false',
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading message page:', error);
+            }
+        });
+
+
+        $('.chat-friend-list').remove();
+        $('.chat-friend-list').append(loadingAnimation);
+
+
+        $.ajax({
+            url: 'find_friends_of_owner',
+            type: 'GET',
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+
+                // $(".chat-friend-list #loadingAnimation").remove(); //to remove loading animatin when page is loaded
+                $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+                $('.chat-friend-list').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading message page:', error);
+            }
+        });
+
 
 
 
@@ -941,11 +997,8 @@ $(document).ready(function () {
         var habitId = $(this).data('habit-id');
         console.log(sentTime + ' ' + habitId);
 
-
-
-
-
-
+        // will carray out db update and insertion
+        verificationDone(habitId, sentTime, true);
 
     });
 
@@ -963,9 +1016,20 @@ $(document).ready(function () {
             });
         });
 
+        var sentTime = $(this).data('sent-time');
+        var habitId = $(this).data('habit-id');
+        console.log(sentTime + ' ' + habitId);
+
+        // will carray out db update and insertion
+        verificationDone(habitId, sentTime, false);
     });
 
+    $(document).on('click', '.last-block', function () {
+        $('.dialog-box-bg').remove();
+        loadVerification();
+    });
 
+    // select the applicant block and gives verification dialog box
     $(document).on('click', '.verification-section .user-block-element', function () {
 
         applicantId = $(this).data('user-id');
@@ -994,20 +1058,46 @@ $(document).ready(function () {
 
     });
 
-    //when verification is verified 
-    $(document).on('click', '.verification-section .user-block-element', function () {
 
-        applicantId = $(this).data('user-id');
-        console.log(applicantId);
+
+    //* ------------------Chat section-------------
+
+
+
+    // text area and send button setting
+    $(document).on('input', '#message-input', function () {
+        if ($(this).val().trim().length > 0) {
+            $('#send-button').css('display', 'block');
+        } else {
+            $('#send-button').css('display', 'none');
+        }
+
+        // Auto adjust textarea height
+        $(this).css('height', 'auto');
+        $(this).css('height', ($(this)[0].scrollHeight > 120 ? 120 : $(this)[0].scrollHeight) + 'px');
+    });
+
+    // click on user on chat list
+    $(document).on('click', '.chat-friend-list .user-block-element', function () {
+
+        senderId = $(this).data('user-id');
+        console.log("chat of " + senderId + " will be opened");
+
+
+        $('.chat-section').empty();
+        $('.chat-section').append(loadingAnimation);
+
 
         $.ajax({
-            url: 'verification_task_sent_of_user/' + applicantId,
+            url: 'get_chats_of/' + senderId,
             type: 'GET',
 
             success: function (response) {
                 // Replace the existing content with the loaded form
                 // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
-                $('.center-content').append(response);
+                $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+                $('.chat-section').append(response);
 
 
             },
@@ -1017,11 +1107,58 @@ $(document).ready(function () {
             }
         });
 
-
-
-
-
     });
+
+    $(document).on('click', '#send-button', function () {
+
+
+        // Get the message from the textarea
+        var message = $('#message-input').val().trim();
+        var receiverId = $(this).data("receiver-id");
+        if (message !== '') {
+            // Send an AJAX request to the backend
+
+            console.log(message);
+            $.ajax({
+                url: 'send_message', // Replace 'your_controller' with your actual controller name
+                method: 'POST',
+                data: { receiver_id: receiverId, message: message }, // Include receiver_id in the data object
+                success: function (response) {
+                    // Clear the textarea after successful sending
+                    $('#message-input').val('');
+
+                    var currentDate = new Date();
+
+                    // Extract hours and minutes
+                    var hours = currentDate.getHours();
+                    var minutes = currentDate.getMinutes();
+
+                    // Add leading zero if minutes is less than 10
+                    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+                    // Format the time in 24-hour format (HH:MM)
+                    var currentTime = hours + ':' + minutes;
+
+                    var newSentMsg = `<div class="message sent">` + message + `
+                                            <div class="timestamp">`+ currentTime + `</div>
+                                            </div>`;
+                    $('.chat-area').append(newSentMsg);
+
+
+
+
+
+
+                },
+                error: function (xhr, status, error) {
+                    // Handle errors if any
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+    });
+
+
 
 
 

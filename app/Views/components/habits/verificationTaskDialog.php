@@ -25,8 +25,8 @@
                         <div class="block last-block">
                             <div class="header"><?= $taskData[count($taskData) - 1]['title'] ?></div>
                             <img src="<?= $taskData[count($taskData) - 1]['media'] ?>" alt="Nature 1">
-                            <button class="unverify-btn last-block"><i class="fas fa-times-circle" data-sent-time="<?= $taskData[count($taskData) - 1]['sent_time'] ?>"></i> Unverify</button>
-                            <button class="verify-btn last-block"><i class="fas fa-check-circle" data-sent-time="<?= $taskData[count($taskData) - 1]['sent_time'] ?>"></i> Verify</button>
+                            <button class="unverify-btn last-block" data-sent-time="<?= $taskData[$i]['sent_time'] ?>" data-habit-id="<?= $taskData[$i]['habit_id'] ?>"><i class="fas fa-times-circle" data-sent-time="<?= $taskData[count($taskData) - 1]['sent_time'] ?>"></i> Unverify</button>
+                            <button class="verify-btn last-block" data-sent-time="<?= $taskData[$i]['sent_time'] ?>" data-habit-id="<?= $taskData[$i]['habit_id'] ?>"><i class="fas fa-check-circle" data-sent-time="<?= $taskData[count($taskData) - 1]['sent_time'] ?>"></i> Verify</button>
                         </div>
                     <?php endif; ?>
 

@@ -6,40 +6,35 @@
 
         <!--left side bar  -->
 
-        <div class="left-sidebar  col-md-2 pt-4">
+        <div class="left-sidebar  col-md-2">
 
-            <div class="sidebar-search">
-                <input type="text" class="search-input" placeholder="Search...">
-            </div>
 
             <div class="sidebar-options">
                 <div class="sidebar-item home-btn active">
                     <i class="fas fa-home avtive"></i> Home
                 </div>
-                <div class="sidebar-item">
-                    <i class="fas fa-search"></i> Explore
-                </div>
-                <div class="sidebar-item">
-                    <i class="fas fa-regular fa-comment-dots"></i> Messages
+
+                <div class="sidebar-item message-btn">
+                    <i class="fas fa-regular fa-comment-dots "></i> Messages
                 </div>
                 <div class="sidebar-item habit-btn">
                     <i class="fas fa-chart-line "></i> Habits
                 </div>
-                <div class="sidebar-item">
-                    <i class="fas fa-calendar-alt"></i> Events
+                <div class="sidebar-item events-btn">
+                    <i class="fas fa-calendar-alt "></i> Events
                 </div>
                 <div class="sidebar-divider"></div>
-                <div class="sidebar-item">
-                    <i class="fas fa-check-circle"></i> AOK
+                <div class="sidebar-item aok-btn">
+                    <i class="fas fa-check-circle "></i> AOK
                 </div>
-                <div class="sidebar-divider"></div>
+                <!-- <div class="sidebar-divider"></div>
                 <div class="sidebar-heading">My Habits</div>
                 <div class="sidebar-item">
                     <i class="fas fa-star"></i> Habit A
                 </div>
                 <div class="sidebar-item">
                     <i class="fas fa-heart"></i> Habit B
-                </div>
+                </div> -->
 
             </div>
 

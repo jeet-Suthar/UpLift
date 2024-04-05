@@ -244,22 +244,16 @@ class HabitController extends BaseController
 
     public function verfication_done($habitId, $sentTime, $status)
     {
-
+        $habitModel =  new HabitsModel();
 
         // Get the user ID from the session
         $userId = session()->get('id');
-
-        $habitModel =  new HabitsModel();
 
         // this will insert row in habit_verification table 
         // then percentage and habit completed will be calculated by trigger function
         $habitModel->addInHabitVerification($userId, $habitId, $sentTime, $status);
 
-
         // will update status of task of user
-        // $habitModel->updateStatus($sentTime, $status);
-
-
-        // return $this->respond(['message' => 'Verifiers removed successfully'], 200);
+        $habitModel->updateStatus($sentTime);
     }
 }

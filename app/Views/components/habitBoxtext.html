@@ -4,106 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Upload and Caption</title>
+    <title>College Chat</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1f1f1f;
-            /* Dark background color */
-            color: #fff;
-            /* Light text color */
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
         }
 
-        .upload-container {
-            position: relative;
-            width: 300px;
-            margin: 50px auto;
-            text-align: center;
-            border: 2px dashed #ccc;
-            padding: 20px;
-            background-color: #333;
-            /* Darker background color */
-        }
-
-        .upload-icon {
-            font-size: 48px;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
-
-        .media-preview {
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        .media-preview img {
-            max-width: 100%;
-            max-height: 200px;
-            margin-bottom: 10px;
-        }
-
-        .caption-input {
+        .chat-area {
             width: 100%;
-            padding: 10px;
-            border: none;
-            background-color: transparent;
-            color: #fff;
-            font-size: 16px;
-            resize: none;
-            /* Prevent resizing of the text area */
-            /* Default border color */
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .caption-input:focus {
-            border-color: #2e2e2e;
+        .message {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+        }
 
-            /* Dark grey border color when focused */
+        .sender {
+            background-color: #007bff;
+            color: #fff;
+            align-self: flex-start;
+        }
+
+        .receiver {
+            background-color: #e9e9e9;
+            color: #000;
+            align-self: flex-end;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="upload-container">
-        <div class="media-preview" id="media-preview"></div>
-        <input type="file" id="media-upload" accept="image/*,">
-        <textarea id="caption-input" class="caption-input" placeholder="Write a caption..."></textarea>
+    <div class="chat-area">
+        <div class="message sender">
+            Hey man, did you see Sarah today in college?
+            <div class="timestamp">10:15 AM</div>
+        </div>
+        <div class="message receiver">
+            Yeah, I saw her. She looked amazing as always!
+            <div class="timestamp">10:17 AM</div>
+        </div>
+        <div class="message sender">
+            Right? I can't stop thinking about her.
+            <div class="timestamp">10:20 AM</div>
+        </div>
+        <div class="message receiver">
+            I know what you mean. She's something else.
+            <div class="timestamp">10:22 AM</div>
+        </div>
+        <div class="message sender">
+            Do you think she's single?
+            <div class="timestamp">10:25 AM</div>
+        </div>
+        <div class="message receiver">
+            Not sure, but I heard she broke up with her boyfriend recently.
+            <div class="timestamp">10:27 AM</div>
+        </div>
+        <div class="message sender">
+            Really? I might have a chance then!
+            <div class="timestamp">10:30 AM</div>
+        </div>
+        <div class="message receiver">
+            Good luck, buddy!
+            <div class="timestamp">10:32 AM</div>
+        </div>
     </div>
-
-    <script>
-        document.getElementById('media-upload').addEventListener('change', function (event) {
-            var preview = document.getElementById('media-preview');
-            preview.innerHTML = '';
-
-            var file = event.target.files[0];
-            var reader = new FileReader();
-
-            reader.onload = function (event) {
-                var image = new Image();
-                image.src = event.target.result;
-                preview.appendChild(image);
-            }
-
-            reader.readAsDataURL(file);
-        });
-
-        document.getElementById('caption-input').addEventListener('input', function (event) {
-            var input = event.target;
-            input.style.height = 'auto'; // Reset the height to auto
-            input.style.height = input.scrollHeight + 'px'; // Set the height based on content
-        });
-
-        document.getElementById('caption-input').addEventListener('keydown', function (event) {
-            if (event.key === 'Enter') {
-                event.preventDefault(); // Prevent the default Enter behavior (inserting a new line)
-                var input = event.target;
-                input.value += '\n'; // Append a newline character to the input value
-                input.style.height = 'auto'; // Reset the height to auto
-                input.style.height = input.scrollHeight + 'px'; // Set the height based on content
-            }
-        });
-    </script>
-
 </body>
 
 </html>

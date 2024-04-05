@@ -10,7 +10,18 @@ class FriendsModel extends Model
 
     protected $allowedFields    = ['user_id', 'friend_id'];
 
-    // * it will find friend of $userId 
+    // * it will find friend of user in the seesion
+    public function find_friends_of_owner($userId)
+    {
+        $query = $this->query('SELECT friend_id 
+                                FROM friends 
+                                WHERE user_id= ? AND friend_id IN (SELECT user_id 
+                                                                    FROM friends 
+                                                                    WHERE friend_id = ?);', [$userId, $userId]); // Replace $user_id with the user ID you want to find friend of
+
+        return $query->getResultArray(); //notice here we use getResultArray() function to get result in form of array
+    }
+    // * it will find friend of $userId  which is requested
     public function findFriends($userId)
     {
         $query = $this->query('SELECT friend_id 
