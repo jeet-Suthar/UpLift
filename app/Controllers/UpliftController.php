@@ -68,6 +68,7 @@ class UpliftController extends BaseController
 
     public function signup()
     {
+
         $data = [];
         helper(['form']);
         //for get req
@@ -164,11 +165,17 @@ class UpliftController extends BaseController
     {
 
 
+
         print_r(session()->get('email'));
         session()->destroy();
         echo 'You have been logged out!!';
     }
 
+    public function getUserIdOfOwner()
+    {
+        $data["userId"] = session()->get('id');
+        echo json_encode($data);
+    }
     public function uplift(): string
     {
         return view('uplift');

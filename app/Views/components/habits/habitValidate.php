@@ -69,7 +69,7 @@
         </div>
 
         <div class="dialog-box-footer" id="dialog-box-button">
-            <div class="dialog-box-button habit-sent-btn" data-habit-id="1">
+            <div class="dialog-box-button habit-sent-btn" data-habit-id="<?= $habit_id ?>">
                 Send <i class="fas fa-upload"></i>
             </div>
         </div>

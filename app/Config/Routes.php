@@ -22,6 +22,7 @@ $routes->match(['get', 'post'], 'signup', 'UpliftController::signup');
 //for logout
 
 $routes->get('logout', 'UpliftController::logout');
+// $routes->get('getUserIdOfOwner', 'UpliftController::getUserIdOfOwner');
 
 
 
@@ -56,8 +57,17 @@ $routes->get('getStoriesOfUser/(:num)', 'storiesController::getStoriesOfUser/$1'
 $routes->get('habit', 'HabitController::habit');
 $routes->get('verifier_dialog', 'HabitController::verifier_dialog');
 $routes->get('get_verifiers_of/(:num)', 'HabitController::get_verifiers_of/$1');
+// will get habit form 
+$routes->get('validation_form_of_habit/(:num)', 'HabitController::validation_form_of_habit/$1');
 // habit sent to verifier
 $routes->post('habit_sent', 'HabitController::habit_sent');
+
+// verificatin task
+$routes->get('get_verification_task', 'HabitController::get_verification_task');
+$routes->get('verification_task_sent_of_user/(:num)', 'HabitController::verification_task_sent_of_user/$1');
+// verification task done
+$routes->get('verfication_done/(:num)/(:any)/(:any)', 'HabitController::verfication_done/$1/$2/$3');
+
 
 
 // following will get those verifier who are friends but not in current verifier list

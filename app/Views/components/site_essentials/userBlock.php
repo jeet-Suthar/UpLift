@@ -9,10 +9,8 @@
     <div class=" user-block-container">
         <?php foreach ($profile_info as $PI) : ?>
 
-            <div class="user-block-element" data-user-id="<?= $PI['user_id'] ?>">
-
+            <div <?php if (!($type == "verification_task" || $type == "verifier" || $type == "newVerifier")) : ?> id="user-block-element" <?php endif; ?> class="user-block-element" data-user-id="<?= $PI['user_id'] ?>">
                 <img src="/uploads/image/1708007671_e648facee8a8daa959a8.gif" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
-
                 <div class=" mt-2">
                     <h6><?= $PI['fname'] ?> <?= $PI['lname'] ?></h6>
                     <p>@<?= $PI['username'] ?></p>

@@ -72,6 +72,7 @@ class HabitController extends BaseController
             echo '<p style="text-align:center;"> No Verifiers </p>';
         }
     }
+
     public function new_verifier()
     {
         $userId = session()->get('id');
@@ -142,6 +143,11 @@ class HabitController extends BaseController
     }
 
     //*-------------validation section-------------
+    public function validation_form_of_habit($habitId)
+    {
+        $data['habit_id'] = $habitId; // this will send habit-id to sent btn's data attribute
+        echo view("components/habits/habitValidate", $data);
+    }
 
     public function habit_sent()
     {
@@ -175,5 +181,85 @@ class HabitController extends BaseController
                 $model->save($data);
             }
         }
+    }
+
+    //*----------------verificaton tasks--------------
+
+    public function get_verification_task()
+    {
+        $userId = session()->get('id');
+        $userModel = new UsersModel();
+        $habitModel = new HabitsModel();
+        $i = 0; //taken for for each loop
+
+        $data['users'] = $habitModel->verificationTaskOf($userId);
+        // users array will have sub array as friend_id becuase in database query we are selecting friend_id 
+
+        $data['type'] = "verification_task";
+        if (!empty($data['users'])) {
+            // for each user_id we have to fetch data of profile_info from user model
+            foreach ($data['users'] as $U) {
+                $data['profile_info'][$i] = $userModel->getUserInfo($U['applicant_id']);
+                //    here as getUserInfo() function send only query output we have used indexing method to index each profile_info and store in $data array
+                $i++; //increment of index
+            }
+            echo view("components/site_essentials/userBlock.php", $data);
+        } else {
+            echo '<p style="text-align:center;"> No tasks </p>';
+        }
+    }
+
+    public function verification_task_dialog($habitId)
+    {
+        $data['habit_id'] = $habitId; // this will send habit-id to sent btn's data attribute
+        echo view("components/habits/habitValidate", $data);
+    }
+
+    public function verification_task_sent_of_user($applicantId)
+    {
+        $userId = session()->get('id');
+        $userModel = new UsersModel();
+        $habitModel = new HabitsModel();
+        $i = 0; //taken for for each loop
+
+        $data['taskData'] = $habitModel->verification_task_sent_of_user($userId, $applicantId);
+        // users array will have sub array as friend_id becuase in database query we are selecting friend_id 
+
+        // echo "<pre>";
+        // print_r($data);
+        echo view('components/habits/verificationTaskDialog', $data);
+
+        // if (!empty($data0['users'])) {
+        //     // for each user_id we have to fetch data of profile_info from user model
+        //     foreach ($data0['users'] as $U) {
+        //         $data['profile_info'][$i] = $userModel->getUserInfo($U['applicant_id']);
+        //         //    here as getUserInfo() function send only query output we have used indexing method to index each profile_info and store in $data array
+        //         $i++; //increment of index
+        //     }
+        //     echo view("components/site_essentials/userBlock.php", $data);
+        // } else {
+        //     echo '<p style="text-align:center;"> No Verifiers </p>';
+        // }
+    }
+
+    public function verfication_done($habitId, $sentTime, $status)
+    {
+
+
+        // Get the user ID from the session
+        $userId = session()->get('id');
+
+        $habitModel =  new HabitsModel();
+
+        // this will insert row in habit_verification table 
+        // then percentage and habit completed will be calculated by trigger function
+        $habitModel->addInHabitVerification($userId, $habitId, $sentTime, $status);
+
+
+        // will update status of task of user
+        // $habitModel->updateStatus($sentTime, $status);
+
+
+        // return $this->respond(['message' => 'Verifiers removed successfully'], 200);
     }
 }

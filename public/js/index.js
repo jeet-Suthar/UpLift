@@ -20,7 +20,9 @@ var addStorySection = `<div class="add-story-section">
 <i class="fa-solid fa-plus"></i>
 <p>Add to story</p>
 </div>`
-// for scroll 90% 
+
+//TODO--------------------------- ✔ ✔ ✔ PRE MADE FUNCTIONS SECTION START✔ ✔ ✔ -------------------------------------------
+
 function isScrollAtBottom() {
     var scrollPosition = $(window).scrollTop();
     var windowHeight = $(window).height();
@@ -143,6 +145,30 @@ async function homeContent() {
     $('.center-content').append('<div class="stories-section"></div>');
     $('.center-content').append('<div class="main-feed"></div>');
 
+    // adding verification task to right sidebar
+    $('.verification-section').empty();
+    $('.verification-section').append(loadingAnimation);
+
+
+
+    $.ajax({
+        url: 'get_verification_task',
+        type: 'GET',
+
+        success: function (response) {
+            $(".verification-section #loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+            $('.verification-section').append(response);
+
+        },
+        error: function (error) {
+            // Handle errors, e.g., show an error message to the user
+            console.error('Error loading form:', error);
+        }
+    });
+
+
+
     $('.stories-section').append(addStorySection);
     // to load post from database asyncronously 
     page = 1; // initial page 
@@ -196,6 +222,7 @@ async function homeContent() {
     });
 }
 
+// for scroll 90% 
 $(window).scroll(function () {
     // Check if the user has scrolled to 90% of the page
     if (isScrollAtBottom()) {
@@ -265,8 +292,32 @@ function getProfileOfUserId(userId) {
     });
 }
 
+// will add entey in habit_verification table and update status in verification_tasks table
+function verificationDone(habitId, sentTime, status) {
+
+    $.ajax({
+        url: 'verfication_done/' + habitId + '/' + sentTime + '/' + status,
+        type: 'GET',
+        async: false,
+        success: function (response) {
+            console.log("Task updated\n Habit ID: " + habitId + "\nsent time: " + sentTime + "\nStatus: " + status)
+
+        },
+        error: function (error) {
+            // Handle errors, e.g., show an error message to the user
+            console.error('Error updating task', error);
+        }
+    });
+
+}
+
+
+
+//TODO--------------------------- ❌❌❌ PRE MADE FUNCTIONS SECTION END ❌❌❌ -------------------------------------------
+
 
 $(document).ready(function () {
+
 
     homeContent();      //it will load main content in home
     //stories dialog box click event
@@ -530,7 +581,7 @@ $(document).ready(function () {
     })
 
     // to get to user's profile 
-    $(document).on('click', '.user-block-element', function () {
+    $(document).on('click', '#user-block-element', function () {
         var userId = $(this).data('user-id');
         console.log(userId);
         getProfileOfUserId(userId);
@@ -806,6 +857,34 @@ $(document).ready(function () {
 
     // validation section
 
+    // validate btn click event
+    $(document).on('click', '.validate-button', function () {
+
+        var habitId = $(this).data('habit-id'); //will get habit id from btn
+
+        $.ajax({
+            url: 'validation_form_of_habit/' + habitId,
+            type: 'GET',
+
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+    });
+
+
+    //todo: Bug in here
+    //* IDK how Bug fixed by itself
+
     $(document).on('click', '.habit-sent-btn', function () {
 
         var formData = new FormData($('#habit-validate-form')[0]);
@@ -825,17 +904,123 @@ $(document).ready(function () {
             success: function (response) {
                 // Handle successful response here if needed
                 console.log('Habit Sent submitted successfully');
+                $('.dialog-box-bg').remove();
+
 
             },
             error: function (xhr, status, error) {
                 // Handle error response here if needed
-                // console.error('habit sending error:', error);
-                $('.dialog-box-bg').remove();
+                console.error('habit sending error:', error);
+                // $('.dialog-box-bg').remove();
                 //! IDK why server is repsonding with 500 but it actually getting updated
                 //! in the database...so for the sake for time saving I am leaving this Ignore
 
+                //* NOT CAUSING ANYMORE TROBLE JUST CHILL
             }
         });
+    });
+
+
+    $(document).on('click', '.verify-btn', function () {
+        var $block = $(this).closest('.block');
+        var $nextBlock = $block.next('.block');
+
+        $block.animate({
+            opacity: 0,
+            left: '100%'
+        }, 500, function () {
+            $block.hide();
+            $block.css({
+                opacity: 1,
+                left: '0'
+            });
+            $nextBlock.show();
+        });
+
+        var sentTime = $(this).data('sent-time');
+        var habitId = $(this).data('habit-id');
+        console.log(sentTime + ' ' + habitId);
+
+
+
+
+
+
+
+    });
+
+    $(document).on('click', '.unverify-btn', function () {
+        var $block = $(this).closest('.block');
+
+        $block.animate({
+            opacity: 0,
+            left: '-100%'
+        }, 500, function () {
+            $block.hide();
+            $block.css({
+                opacity: 1,
+                left: '0'
+            });
+        });
+
+    });
+
+
+    $(document).on('click', '.verification-section .user-block-element', function () {
+
+        applicantId = $(this).data('user-id');
+        console.log(applicantId);
+
+        $.ajax({
+            url: 'verification_task_sent_of_user/' + applicantId,
+            type: 'GET',
+
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+
+
+
+
+    });
+
+    //when verification is verified 
+    $(document).on('click', '.verification-section .user-block-element', function () {
+
+        applicantId = $(this).data('user-id');
+        console.log(applicantId);
+
+        $.ajax({
+            url: 'verification_task_sent_of_user/' + applicantId,
+            type: 'GET',
+
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+
+
+
+
     });
 
 

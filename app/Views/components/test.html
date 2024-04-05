@@ -4,106 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rewards</title>
+    <title>Block Carousel with Verification Buttons</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-D4qI5R9s+eLwKsy3s0g9LYrqr59QcxM8jZ9bBvAfXu9scxIqL/6Vy70XZGimA1NJYm5F+GGpYW1+TR5P+J7TQg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
-            background-color: #121212;
+            background-color: #1e1e1e;
             color: #fff;
-            font-family: Arial, sans-serif;
         }
 
-        .user-reward-container {
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blocks {
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-wrap: wrap;
+            transition: transform 0.5s ease;
+            position: relative;
+        }
+
+        .block {
             width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            z-index: 1;
-
-        }
-
-        .user-reward {
-            /* position: relative; */
-            width: 100px;
-            margin: 10px;
-            padding: 10px;
+            flex: 0 0 auto;
+            position: relative;
+            margin-bottom: 20px;
+            border: 1px solid #333;
             border-radius: 10px;
-            border-color: #9b9b9b;
-            background-color: #333;
-            transition: all 0.3s ease;
+            overflow: hidden;
         }
 
-        .user-reward:hover {
-            background-color: #555;
-            transform: scale(1.05);
-        }
-
-        .user-reward img {
-            width: 60px;
+        .block img {
+            width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto 10px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
         }
 
-        .user-reward h3 {
+        .header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
             text-align: center;
-            font-size: 14px;
-            margin: 0;
-            transition: all 0.3s ease;
         }
 
-        /* Tooltip */
-        .user-reward-tooltip {
-            position: absolute;
-            visibility: hidden;
-            background-color: #292929;
-            color: #a19f9f;
+        .footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
             text-align: center;
-            border-radius: 6px;
-            margin-right: 10px;
-            margin-top: 15px;
-            padding: 5px 10px;
-            z-index: 10;
-            opacity: 0;
-            font-size: 12px;
-            transition: opacity 0.3s;
         }
 
-        .user-reward-tooltip::after {
-            content: "";
+        .verify-btn {
             position: absolute;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #555 transparent transparent transparent;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
         }
 
-        .user-reward:hover .user-reward-tooltip {
-            visibility: visible;
-            opacity: 1;
-            z-index: 10;
+        .unverify-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
 
+        .close-verification-dialog {
+            display: none;
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
 
-    <div class="user-reward-container">
-
-        <div class="user-reward">
-            <img src="https://picsum.photos/200" alt="Reward 1">
-            <h3>Reward 1</h3>
-            <div class="user-reward-tooltip">
-                <span>Description for Reward 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec justo
-                    sodales, malesuada nisl nec, mattis sapien.</span>
+    <div class="container">
+        <div class="blocks">
+            <div class="block">
+                <div class="header">Header 1</div>
+                <img src="https://via.placeholder.com/800x400/003366" alt="Nature 1">
+                <button class="unverify-btn"><i class="fas fa-times-circle"></i> Unverify</button>
+                <button class="verify-btn"><i class="fas fa-check-circle"></i> Verify</button>
+                <div class="footer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="header">Header 2</div>
+                <img src="https://via.placeholder.com/800x400/660033" alt="Nature 2">
+                <button class="unverify-btn"><i class="fas fa-times-circle"></i> Unverify</button>
+                <button class="verify-btn"><i class="fas fa-check-circle"></i> Verify</button>
+                <div class="footer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="block close-verification-dialog">
+                <div class="header">Header 3</div>
+                <img src="https://via.placeholder.com/800x400/003300" alt="Nature 3">
+                <button class="verify-btn"><i class="fas fa-check-circle"></i> Close Verification Task</button>
+                <div class="footer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
             </div>
         </div>
-
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".verify-btn").click(function () {
+                var $block = $(this).closest('.block');
+                var $nextBlock = $block.next('.block');
+
+                $block.animate({
+                    opacity: 0,
+                    left: '100%'
+                }, 500, function () {
+                    $block.hide();
+                    $block.css({ opacity: 1, left: '0' });
+                    $nextBlock.show();
+                });
+            });
+
+            $(".unverify-btn").click(function () {
+                var $block = $(this).closest('.block');
+                var $prevBlock = $block.prev('.block');
+
+                $block.animate({
+                    opacity: 0,
+                    left: '-100%'
+                }, 500, function () {
+                    $block.hide();
+                    $block.css({ opacity: 1, left: '0' });
+                    $prevBlock.show();
+                });
+            });
+        });
+    </script>
 
 </body>
 
