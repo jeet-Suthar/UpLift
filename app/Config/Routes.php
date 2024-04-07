@@ -107,6 +107,10 @@ $routes->get('get_chats_of/(:num)', 'ChatsController::get_chats_of/$1');
 $routes->post('send_message', 'ChatsController::send_message');
 
 
+//!-------------------- AOk section --------------------
+
+$routes->get('aok_page', 'AokController::aok_page');
+
 
 
 

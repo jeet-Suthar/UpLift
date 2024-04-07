@@ -313,6 +313,31 @@ function verificationDone(habitId, sentTime, status) {
 
 }
 
+// --------------------   AOK  --------------------
+function loadAOK() {
+    $('.center-content').empty();
+    $('.center-content').append(loadingAnimation);
+
+
+    $.ajax({
+        url: 'aok_page',
+        type: 'GET',
+        success: function (response) {
+            $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+            $('.center-content').append(response);
+
+        },
+        error: function (error) {
+            // Handle errors, e.g., show an error message to the user
+            console.error('Error loading posts:', error);
+        }
+    });
+
+
+
+
+}
 
 
 //TODO--------------------------- ❌❌❌ PRE MADE FUNCTIONS SECTION END ❌❌❌ -------------------------------------------
@@ -543,6 +568,10 @@ $(document).ready(function () {
         // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
         homeContent();
     })
+    $('.aok-btn').click(function () {
+        loadAOK();
+    })
+
 
     // View-profile click event inside user-menu 
     $('.view-profile').click(function () {
@@ -555,6 +584,9 @@ $(document).ready(function () {
         getProfileOfUserId(userId);
 
     })
+
+
+
 
 
 
@@ -702,6 +734,30 @@ $(document).ready(function () {
         });
     });
 
+    $(document).on('click', '.add-story-section', function () {
+
+        var formData = new FormData($('#post-form')[0]);
+        // You can append additional form data here if needed
+
+        // AJAX request to submit form data
+        $.ajax({
+            url: 'submit_post',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                // Handle successful response here if needed
+                console.log('Form submitted successfully');
+                $('.dialog-box-bg').remove();
+
+            },
+            error: function (xhr, status, error) {
+                // Handle error response here if needed
+                console.error('Form submission error:', error);
+            }
+        });
+    });
     //*---------------- Habit and Verification section------------------
 
     // verification section
