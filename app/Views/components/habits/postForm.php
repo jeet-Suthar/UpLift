@@ -2,7 +2,7 @@
 
     <div class="dialog-box">
         <div class="dialog-box-header">
-            <p>Title</p>
+            <p>Add Post</p>
             <i class="dialog-box-close-btn fa-solid fa-xmark"></i>
         </div>
 

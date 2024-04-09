@@ -205,7 +205,7 @@ class HabitController extends BaseController
             }
             echo view("components/site_essentials/userBlock.php", $data);
         } else {
-            echo '<p style="text-align:center;"> No tasks </p>';
+            echo '<p style="text-align:center; margin:10px"> No tasks </p>';
         }
     }
 

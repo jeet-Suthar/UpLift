@@ -29,6 +29,7 @@ $routes->get('logout', 'UpliftController::logout');
 //for home page
 $routes->get('uplift', 'UpliftController::uplift');
 $routes->post('uplift', 'UpliftController::uplift');
+$routes->get('search_users/(:any)', 'UpliftController::search_users/$1');
 
 //for posts
 $routes->get('post_form_old', 'UpliftController::post_form_old');
@@ -81,15 +82,19 @@ $routes->post('add_verifier', 'HabitController::add_verifier');
 //User Profile Section
 $routes->get('user_profile', 'UserProfileController::index');
 $routes->get('user_profile/(:num)', 'UserProfileController::user_profile/$1');
+$routes->get('edit_profile_form', 'UserProfileController::edit_profile_form');
+$routes->post('profile_update', 'UserProfileController::profile_update');
 
 
 // friends section as follower following section
 $routes->get('find_friends/(:num)', 'FriendsController::find_friends/$1');
 $routes->get('find_friends_of_owner', 'FriendsController::find_friends_of_owner');
-$routes->get('find_friend_request_of/(:num)', 'FriendsController::find_friend_request_of/$1');
+$routes->get('find_friend_request', 'FriendsController::find_friend_request');
 $routes->get('find_request_not_accepted_of/(:num)', 'FriendsController::find_request_not_accepted_of/$1');
 $routes->get('find_followers_of_User/(:num)', 'FriendsController::find_followers_of_User/$1');
 $routes->get('find_followings_of_User/(:num)', 'FriendsController::find_followings_of_User/$1');
+$routes->get('follow_user/(:num)', 'UserProfileController::follow_user/$1');
+$routes->get('unfollow_user/(:num)', 'UserProfileController::unfollow_user/$1');
 
 //forms
 $routes->get('post_form', 'PostController::Post_form');

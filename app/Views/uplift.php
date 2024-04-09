@@ -1,7 +1,4 @@
-<?= $this->include('template/header') ?>
-
 <body>
-    <?= $this->include('template/navbar') ?>
     <div class="content mt-3">
 
         <!--left side bar  -->
@@ -56,12 +53,15 @@
 
         <div class="right-sidebar">
 
-            <span>Verification</span>
 
+            <span>Verification</span>
             <div class="verification-section">
 
 
             </div>
+
+
+
 
 
 

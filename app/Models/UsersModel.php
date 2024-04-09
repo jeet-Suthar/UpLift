@@ -7,7 +7,8 @@ use CodeIgniter\Model;
 class UsersModel extends Model
 {
     protected $table            = 'users';
-    protected $allowedFields    = ['fname', 'lname', 'email', 'user_password', ' profile_dp', 'bio', 'birth_date', 'anonymous_username', 'anonymous_profile_dp', 'username'];
+    protected $primaryKey = 'user_id';
+    protected $allowedFields    = ['fname', 'lname', 'email', 'user_password', 'profile_dp', 'background_img', 'bio', 'birth_date', 'anonymous_username', 'anonymous_profile_dp', 'username'];
 
     protected $beforeInsert   = ['beforeInsertPassword']; //if new password is inserted it will be hashed and then inserted in db
     protected $beforeUpdate   = ['beforeUpdatePassword']; //same

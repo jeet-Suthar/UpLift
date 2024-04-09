@@ -91,6 +91,27 @@ class FriendsModel extends Model
         return $query->getResultArray(); //notice here we use getResultArray() function to get result in form of array
     }
 
+    public function followUser($userId)
+    {
+        $ownerId = session()->get('id');
+
+        $query = $this->query('INSERT INTO friends(
+            user_id,friend_id)
+           VALUES (?, ?);', [$ownerId, $userId]); // Replace $user_id with the user ID you want to find friend of
+
+    }
+    public function unFollowUser($userId)
+    {
+        $ownerId = session()->get('id');
+
+        $query = $this->query('DELETE FROM friends
+            WHERE user_id = ? AND friend_id = ?
+           ', [$ownerId, $userId]); // Replace $user_id with the user ID you want to find friend of
+
+    }
+
+
+
 
     // // Dates
     // protected $useTimestamps = false;

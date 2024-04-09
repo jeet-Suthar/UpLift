@@ -59,12 +59,13 @@ class FriendsController extends BaseController
         }
     }
 
-    public function find_friend_request_of($userId)
+    public function find_friend_request()
     {
         $friendModel = new FriendsModel();
         $userModel = new UsersModel();
         $i = 0; //taken for for each loop
 
+        $userId = session()->get('id');
 
         $data0['users'] = $friendModel->findFriendRequestOf($userId);
         // users array will have sub array as user_id becuase in database query we are selecting user_id 
@@ -79,7 +80,7 @@ class FriendsController extends BaseController
             }
             echo view("components/site_essentials/userBlock.php", $data);
         } else {
-            echo "No requests in h1 tag";
+            echo "No requests";
         }
     }
 

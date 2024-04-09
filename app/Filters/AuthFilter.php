@@ -8,10 +8,10 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class AuthFilter implements FilterInterface
 {
-    
+
     public function before(RequestInterface $request, $arguments = null)
     {
-        if(!session()->get('isLoggedIn'))
+        if (!session()->get('isLoggedIn'))
             return redirect()->to(base_url('/login'));
     }
 
@@ -21,7 +21,7 @@ class AuthFilter implements FilterInterface
      * to stop execution of other after filters, short of
      * throwing an Exception or Error.
      *
-     * @param RequestInterface  $request
+     * @param RequestInterface  $request   
      * @param ResponseInterface $response
      * @param array|null        $arguments
      *

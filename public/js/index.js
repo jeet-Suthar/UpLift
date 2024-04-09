@@ -132,8 +132,8 @@ function getStoriesInfo(userId) {
 
 function storiesReplacment() {
 
-    $('.story-user-info img').attr("src", 'uploads/image/' + storyData.userInfo.profile_dp)
-    $('.story-user-info p').html(storyData.userInfo.fname + ' ' + storyData.userInfo.lname);
+    $('.story-user-info img').attr("src", 'uploads/assets/user/user_pfp/' + storyData.userInfo.profile_dp)
+    $('.story-user-info span').html(storyData.userInfo.fname + ' ' + storyData.userInfo.lname);
     $('#story-media').attr("src", 'uploads/stories/image/' + storyData.stories[0]["media"]);
     $(".progress-bar-section").empty();
     for (var i = 0; i < storyData.stories.length; i++) {
@@ -165,12 +165,51 @@ function loadVerification() {
 
 
 }
+
+function loadRequests() {
+
+
+    // remove the request-section div page is loaded ik it doesn't there for no request but it needed
+    $('.request-section').remove();
+
+    $.ajax({
+        url: 'find_friend_request',
+        type: 'GET',
+
+        success: function (response) {
+            // $(".verification-section #loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+            if (response != 'No requests') {
+
+
+                $('.right-sidebar').append('<span>Requests</span><div class="request-section"></div>');
+
+                $('.request-section').append(response);
+
+
+            } else {
+                // $('.right-sidebar').append('<div class="request-section"></div>');
+                // $('.request-section').append(response);
+
+            }
+
+
+        },
+        error: function (error) {
+            // Handle errors, e.g., show an error message to the user
+            console.error('Error loading form:', error);
+        }
+    });
+
+}
 async function homeContent() {
 
     $('.center-content').append('<div class="stories-section"></div>');
     $('.center-content').append('<div class="main-feed"></div>');
 
     loadVerification();
+    loadRequests();
+
     $('.stories-section').append(addStorySection);
     // to load post from database asyncronously 
     page = 1; // initial page 
@@ -373,8 +412,8 @@ $(document).ready(function () {
 
                 // console.log(response);
                 $('.stories-section').append(response);
-                $('.story-user-info img').attr("src", 'uploads/image/' + storyData.userInfo.profile_dp)
-                $('.story-user-info p').html(storyData.userInfo.fname + ' ' + storyData.userInfo.lname);
+                $('.story-user-info img').attr("src", 'uploads/assets/user/user_pfp/' + storyData.userInfo.profile_dp)
+                $('.story-user-info span').html(storyData.userInfo.fname + ' ' + storyData.userInfo.lname);
                 $('#story-media').attr("src", 'uploads/stories/image/' + storyData.stories[0]["media"]);
                 for (var i = 0; i < storyData.stories.length; i++) {
                     $(".progress-bar-section").append('<div class="progress-bar bar-' + i + '"></div>')
@@ -395,6 +434,9 @@ $(document).ready(function () {
         console.log('len of story' + storyData.stories.length)
         if (currentStoryNumber < storyData.stories.length - 1) {
             currentStoryNumber++;
+            // $('.story-user-info img').attr("src", 'uploads/assets/user/user_pfp/' + storyData.stories[currentStoryNumber]["profile_dp"])
+            // $('.story-user-info span').html(storyData.userInfo.fname + ' ' + storyData.userInfo.lname);
+
             $('#story-media').attr("src", 'uploads/stories/image/' + storyData.stories[currentStoryNumber]["media"]);
 
             console.log(currentStoryNumber)
@@ -708,6 +750,9 @@ $(document).ready(function () {
 
     });
 
+    //--------------------- Story Section ---------------------------
+
+
     // explicitly post the form to backend API without need to reload site
     $(document).on('click', '.submit-post-btn', function () {
 
@@ -736,12 +781,34 @@ $(document).ready(function () {
 
     $(document).on('click', '.add-story-section', function () {
 
+
+        $.ajax({
+            url: 'story_form',
+            type: 'GET',
+
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+    });
+
+    // explicitly post the form to backend API without need to reload site
+    $(document).on('click', '.submit-story-btn', function () {
+
         var formData = new FormData($('#post-form')[0]);
         // You can append additional form data here if needed
 
         // AJAX request to submit form data
         $.ajax({
-            url: 'submit_post',
+            url: 'add_stories',
             type: 'POST',
             data: formData,
             processData: false,
@@ -757,6 +824,10 @@ $(document).ready(function () {
                 console.error('Form submission error:', error);
             }
         });
+    });
+
+    $(document).on('click', '.story-close', function () {
+        $('#story-dialog').remove();
     });
     //*---------------- Habit and Verification section------------------
 
@@ -1214,6 +1285,30 @@ $(document).ready(function () {
         }
     });
 
+    //*--------------edit profile button------------
+
+    $(document).on('click', '.edit-profile', function () {
+
+
+
+        $.ajax({
+            url: 'edit_profile_form',
+            type: 'GET',
+
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+    });
 
 
 
@@ -1234,6 +1329,60 @@ $(document).ready(function () {
             menu.hide();
         }
     });
+
+
+    //*----------------Follow Unfollow section-------------------
+
+
+    $(document).on('click', '.follow-profile-btn', function () {
+
+        $('.follow-profile-btn').html('Following');
+        loadRequests();
+        $(this).removeClass('follow-profile-btn');
+        $(this).addClass('following-profile-btn');
+        var userId = $(this).data('user-id');
+
+        $.ajax({
+            url: 'follow_user/' + userId,
+            type: 'GET',
+
+            success: function (response) {
+                console.log('following ' + userId + ' from now on!')
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error in following:', error);
+            }
+        });
+
+    });
+    $(document).on('click', '.following-profile-btn', function () {
+
+        $('.following-profile-btn').html('Follow');
+        var userId = $(this).data('user-id');
+        $(this).removeClass('following-profile-btn');
+        $(this).addClass('follow-profile-btn');
+
+        $.ajax({
+            url: 'unfollow_user/' + userId,
+            type: 'GET',
+
+            success: function (response) {
+                console.log('MKC is ' + userId + 'user ID ki ! I am moving on now !!')
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error in following:', error);
+            }
+        });
+
+    });
+
+
     //!------------------------   MENU END  -----------------------------
 
 
@@ -1266,12 +1415,55 @@ $(document).ready(function () {
     });
 
 
-    $('.search-input').keyup(function (event) {
+
+    $('.navbar-search-bar').keyup(function (event) {
         // Check if Enter key is pressed (key code 13)
-        if (event.keyCode === 13) {
-            // Perform search action
-            console.log("searched for " + $('.search-input').val());
+        // if (event.keyCode === 13) {
+
+        var searchedTerm = $('.navbar-search-bar').val();
+        // Check if the search term is empty or contains only spaces
+        if (searchedTerm === '' || searchedTerm.match(/^ +$/)) {
+            // If the search term is empty or contains only spaces, hide the search result box
+            $('.search-result-box').css('visibility', 'hidden');
+        } else {
+            // If the search term is not empty, show the search result box
+            $('.search-result-box').css('visibility', 'visible');
         }
+        // Perform search action
+        // $('.search-result-box').css('visibility', 'visible');;
+        console.log("searched for " + searchedTerm);
+
+
+
+
+        $.ajax({
+            url: 'search_users/' + searchedTerm,
+            type: 'GET',
+            success: function (response) {
+                console.log(response);
+
+                $('.search-result-box').empty();
+
+                $('.search-result-box').append(response);
+            }, error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('error while getting searched reuslt :', error);
+            }
+
+        });
+
     });
+
+    $('.search-result-box').on('click', '*', function (event) {
+        $('.search-result-box').empty();
+        $('.navbar-search-bar').val('');
+
+
+        $('.search-result-box').css('visibility', 'hidden');
+    });
+
+
+
+
 
 });
