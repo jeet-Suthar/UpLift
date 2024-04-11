@@ -17,9 +17,9 @@
                 <div class="sidebar-item habit-btn">
                     <i class="fas fa-chart-line "></i> Habits
                 </div>
-                <div class="sidebar-item events-btn">
+                <!-- <div class="sidebar-item events-btn">
                     <i class="fas fa-calendar-alt "></i> Events
-                </div>
+                </div> -->
                 <div class="sidebar-divider"></div>
                 <div class="sidebar-item aok-btn">
                     <i class="fas fa-check-circle "></i> AOK

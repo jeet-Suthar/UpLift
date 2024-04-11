@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ChatsModel;
 use App\models\PostSummaryModel;
 use App\models\CommentsModel;
 use App\Models\PostsModel;
@@ -17,10 +18,11 @@ class PostController extends BaseController
     }
 
     //! method for getting total post in database at particular time
-    public function totalPost(): string
+    public function totalPost()
     {
         $postModel = new PostSummaryModel();
-        return $postModel->countAll();
+        return $postModel->countPost();
+        // echo $postModel;
     }
     //! it function which loads all post in main feed
     public function get_post($page)
@@ -49,7 +51,7 @@ class PostController extends BaseController
             //! for last page on site or (if total post are less then 10)
 
             //* now will get total post count from db
-            $totalPost = $postModel->countAll();
+            $totalPost = $postModel->countPost();
 
             // if we modulous this count then will get remmaining posts
             $remainingPost = $totalPost % $count;
@@ -135,5 +137,43 @@ class PostController extends BaseController
             $model = new PostsModel();
             $model->save($data);
         }
+    }
+
+
+    // comment section
+
+    public function comment_post()
+    {
+        $comment = $this->request->getPost('comment');
+        $postId = $this->request->getPost('post_id');
+
+        $commentModel = new CommentsModel();
+        $userId = session()->get('id');
+
+        $commentModel->comment_post($userId, $postId, $comment);
+
+
+
+        // Process the message, for example, store it in the database
+        // You can use $message variable here to access the message sent from the frontend
+
+        // Return a response if needed
+        return $this->response->setJSON(['status' => 'success']);
+    }
+
+    public function liked_post()
+    {
+        $postId = $this->request->getPost('post_id');
+
+        $userId = session()->get('id');
+
+
+        // $commentModel->comment_post($userId, $postId, $comment);
+
+
+
+        // Process the message, for example, store it in the database
+        // You can use $message variable here to access the message sent from the frontend
+
     }
 }

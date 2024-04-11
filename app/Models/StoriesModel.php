@@ -17,7 +17,17 @@ class StoriesModel extends Model
     public function getLatestStories()
     {
         $LatestStories = new LatestStoriesModel();
-        return $LatestStories->findAll();
+        // return $LatestStories->findAll();
+
+        $userId = session()->get('id');
+
+        $query = $this->query("SELECT *
+        FROM latestuserstories 
+        where user_id = ? OR user_id IN (select friend_id
+                                          FROM friends f
+                                          WHERE f.user_id = ?) ", [$userId, $userId]);
+
+        return $query->getResultArray();
     }
 
     //after getting above data when user clicks on certain stories then 
@@ -36,8 +46,18 @@ class StoriesModel extends Model
     }
     public function getLatestStoriesUserId()
     {
-        $LatestStories = new LatestStoriesModel();
-        $query = $LatestStories->select('user_id')->get();
-        return $query->getResult();
+        // $LatestStories = new LatestStoriesModel();
+        // $query = $LatestStories->select('user_id')->get();
+        // return $query->getResult();
+
+        $userId = session()->get('id');
+
+        $query = $this->query("SELECT user_id
+        FROM latestuserstories 
+        where user_id = ? OR user_id IN (select friend_id
+                                          FROM friends f
+                                          WHERE f.user_id = ?) ", [$userId, $userId]);
+
+        return $query->getResultArray();
     }
 }

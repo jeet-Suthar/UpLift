@@ -22,11 +22,13 @@ $routes->match(['get', 'post'], 'signup', 'UpliftController::signup');
 //for logout
 
 $routes->get('logout', 'UpliftController::logout');
+$routes->get('help_support', 'UpliftController::help_support');
+$routes->get('setting', 'UpliftController::setting');
 // $routes->get('getUserIdOfOwner', 'UpliftController::getUserIdOfOwner');
 
 
 
-//for home page
+
 $routes->get('uplift', 'UpliftController::uplift');
 $routes->post('uplift', 'UpliftController::uplift');
 $routes->get('search_users/(:any)', 'UpliftController::search_users/$1');
@@ -43,6 +45,9 @@ $routes->get('get_post/(:any)', 'PostController::get_post/$1');
 $routes->get('totalPost', 'PostController::totalPost');
 // for user Profile 
 $routes->get('get_post_of_user_id/(:num)', 'PostController::get_post_of_user_id/$1');
+$routes->post('comment_post', 'PostController::comment_post');
+$routes->post('liked_post', 'PostController::liked_post');
+$routes->post('unliked_post', 'PostController::unliked_post');
 
 
 //story controller

@@ -12,10 +12,10 @@ class CommentsModel extends Model
     // protected $returnType       = 'array';
     // protected $useSoftDeletes   = false;
     // protected $protectFields    = true;
-    protected $allowedFields    = ['user_id','post_id','content','total_comment_likes','commented_time'];
+    protected $allowedFields    = ['user_id', 'post_id', 'content', 'total_comment_likes', 'commented_time'];
 
     //getting top comments
-    public function getTopCommentsWithUserInfo($postId,$count=2)
+    public function getTopCommentsWithUserInfo($postId, $count = 2)
     {
         $builder = $this->db->table('comments');
         $builder->select('comments.comment_id, comments.content, comments.total_comment_likes, users.username, users.profile_dp');
@@ -27,6 +27,13 @@ class CommentsModel extends Model
         return $builder->get()->getResultArray();
     }
 
+    public function comment_post($userId, $postId, $comment)
+    {
+        $query = $this->query('INSERT INTO comments(
+            user_id, post_id, content)
+           VALUES (?, ?, ?);', [$userId, $postId, $comment]); // Replace $user_id with the user ID you want to find friend of
+
+    }
     // // Dates
     // protected $useTimestamps = false;
     // protected $dateFormat    = 'datetime';

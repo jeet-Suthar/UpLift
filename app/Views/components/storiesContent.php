@@ -2,8 +2,21 @@
     foreach ($latestStories as $LS) : ?>
         <div class="story-container" data-user-id="<?= $LS['user_id'] ?>">
             <div class="story-profile-picture">
+                <?php
+                if ($LS['profile_dp'] === null) {
+                    // If the user does not have a profile picture, display a default one
+                ?>
+                    <img src="uploads/assets/user/user_pfp/pfp_placeholder.png" alt=" Profile Picture">
+                <?php
+                } else {
+                    // If the user has a profile picture, display it
+                ?>
+                    <img src="uploads/assets/user/user_pfp/<?= $LS['profile_dp']; ?>" alt=" Profile Picture">
+                <?php
+                }
+                ?>
 
-                <img src="/uploads/assets/user/user_pfp/<?= $LS['profile_dp'] ?>" alt=" Profile Picture">
+                <!-- <img src="/uploads/assets/user/user_pfp/ = $LS['profile_dp'] ?>" alt=" Profile Picture"> -->
 
                 <!-- <img src="https://via.placeholder.com/40" alt="Profile Picture"> -->
             </div>

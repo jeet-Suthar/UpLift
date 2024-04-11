@@ -95,9 +95,15 @@ async function loadPost() {
         type: 'GET',
         success: function (response) {
             // Replace the existing content with the loaded form
+            if (response == 0) {
+                $("#loadingAnimation").remove();
+                $('.main-feed').append('<p style="text-align:center; color:darkgray;">No Posts<br>Follow someone in order to see some posts</p>');
 
-            totalPost = response;
-            console.log('total post on database = ' + totalPost);
+
+            } else {
+                totalPost = response;
+                console.log('total post on database = ' + totalPost);
+            }
             //         totalPage = Math.ceil(totalPost/10);
             // console.log('total page(s) = ' + totalPage);
         }
@@ -132,7 +138,17 @@ function getStoriesInfo(userId) {
 
 function storiesReplacment() {
 
-    $('.story-user-info img').attr("src", 'uploads/assets/user/user_pfp/' + storyData.userInfo.profile_dp)
+    if (storyData.userInfo.profile_dp == null) {
+
+        $('.story-user-info img').attr("src", 'uploads/assets/user/user_pfp/pfp_placeholder.png');
+    } else {
+
+        $('.story-user-info img').attr("src", 'uploads/assets/user/user_pfp/' + storyData.userInfo.profile_dp);
+    }
+    // $('.story-user-info img').attr("src", 'uploads/assets/user/user_pfp/' + storyData.userInfo.profile_dp)
+
+
+
     $('.story-user-info span').html(storyData.userInfo.fname + ' ' + storyData.userInfo.lname);
     $('#story-media').attr("src", 'uploads/stories/image/' + storyData.stories[0]["media"]);
     $(".progress-bar-section").empty();
@@ -412,7 +428,13 @@ $(document).ready(function () {
 
                 // console.log(response);
                 $('.stories-section').append(response);
-                $('.story-user-info img').attr("src", 'uploads/assets/user/user_pfp/' + storyData.userInfo.profile_dp)
+                if (storyData.userInfo.profile_dp == null) {
+
+                    $('.story-user-info img').attr("src", 'uploads/assets/user/user_pfp/pfp_placeholder.png');
+                } else {
+
+                    $('.story-user-info img').attr("src", 'uploads/assets/user/user_pfp/' + storyData.userInfo.profile_dp);
+                }
                 $('.story-user-info span').html(storyData.userInfo.fname + ' ' + storyData.userInfo.lname);
                 $('#story-media').attr("src", 'uploads/stories/image/' + storyData.stories[0]["media"]);
                 for (var i = 0; i < storyData.stories.length; i++) {
@@ -624,6 +646,64 @@ $(document).ready(function () {
         var userId = $(this).data('user-id');
 
         getProfileOfUserId(userId);
+
+    })
+
+    $('.help').click(function () {
+        $('.center-content').empty();
+        $('.center-content').append(loadingAnimation);
+
+        // gets users's profile wala section
+        $.ajax({
+            url: 'help_support/',
+            type: 'GET',
+            async: 'true',
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+
+
+
+    })
+
+    $('.settings').click(function () {
+        $('.center-content').empty();
+        $('.center-content').append(loadingAnimation);
+
+        // gets users's profile wala section
+        $.ajax({
+            url: 'setting/',
+            type: 'GET',
+            async: 'true',
+            success: function (response) {
+                // Replace the existing content with the loaded form
+                // $('.center-content').find('*').not('.stories-section, .main-feed').remove();
+                $("#loadingAnimation").remove(); //to remove loading animatin when page is loaded
+
+                $('.center-content').append(response);
+
+
+            },
+            error: function (error) {
+                // Handle errors, e.g., show an error message to the user
+                console.error('Error loading form:', error);
+            }
+        });
+
+
+
 
     })
 
@@ -1399,13 +1479,44 @@ $(document).ready(function () {
         $(this).closest('.like-btn').toggleClass('active');
         var isActive = $(this).closest('.like-btn').hasClass('active');
 
+        var postId = $(this).data("post-id");
+
+
         if (isActive) {
             // incrementing like count using parseInt inside html and adding 1
             $(this).siblings('.like-count').html(parseInt($(this).siblings('.like-count').html()) + 1);
+
+            $.ajax({
+                url: 'liked_post/' + postId,
+                type: 'POST',
+                data: { post_id: postId },
+                success: function (response) {
+                    console.log(response);
+
+                    console.log("you liked post with id " + postId)
+                }, error: function (error) {
+                    // Handle errors, e.g., show an error message to the user
+                    console.error('error while getting searched reuslt :', error);
+                }
+
+            });
         }
         else {
             // decrementing like count using parseInt inside html and sunbstractng by 1
             $(this).siblings('.like-count').html(parseInt($(this).siblings('.like-count').html()) - 1);
+            $.ajax({
+                url: 'unliked_post/' + postId,
+                type: 'POST',
+                data: { post_id: postId }, success: function (response) {
+                    console.log(response);
+
+                    console.log("you unliked post with id " + postId)
+                }, error: function (error) {
+                    // Handle errors, e.g., show an error message to the user
+                    console.error('error while getting searched reuslt :', error);
+                }
+
+            });
         }
     });
 
@@ -1466,4 +1577,33 @@ $(document).ready(function () {
 
 
 
+});
+// ============ comment section ================
+
+$(document).on('click', '#comment-button', function () {
+
+
+    // Get the message from the textarea
+    var comment = $('#message-input').val().trim();
+    var postId = $(this).data("post-id");
+    if (comment !== '') {
+        // Send an AJAX request to the backend
+
+        console.log(comment);
+        $.ajax({
+            url: 'comment_post', // Replace 'your_controller' with your actual controller name
+            method: 'POST',
+            data: { post_id: postId, comment: comment }, // Include receiver_id in the data object
+            success: function (response) {
+                // Clear the textarea after successful sending
+                $('#message-input').val('');
+
+
+            },
+            error: function (xhr, status, error) {
+                // Handle errors if any
+                console.error(xhr.responseText);
+            }
+        });
+    }
 });

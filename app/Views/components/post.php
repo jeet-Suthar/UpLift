@@ -36,8 +36,22 @@ if (isset($post_data)) :
 
             <!-- User Profile Section -->
             <div class="post-info">
+                <?php
+                if ($PD['profile_dp'] === null) {
+                    // If the user does not have a profile picture, display a default one
+                ?>
+                    <img src="uploads/assets/user/user_pfp/pfp_placeholder.png" class="rounded-circle mr-2" width="40" height="40">
+                <?php
+                } else {
+                    // If the user has a profile picture, display it
+                ?>
+                    <img src="uploads/assets/user/user_pfp/<?= $PD['profile_dp']; ?>" class="rounded-circle mr-2" width="40" height="40">
+                <?php
+                }
+                ?>
 
-                <img src="/uploads/assets/user/user_pfp/<?= $PD['profile_dp'] ?>" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40">
+
+                <!-- <img src="/uploads/assets/user/user_pfp/ ?= $PD['profile_dp'] ?>" alt="Profile Picture" class="rounded-circle mr-2" width="40" height="40"> -->
 
                 <div class=" mt-2">
                     <h6><?= $PD['username'] ?></h6>
@@ -64,9 +78,11 @@ if (isset($post_data)) :
             <div class="post-actions">
 
                 <div class="like-btn">
+
                     <i class="fas fa-duotone fa-thumbs-up likeButton" data-post-id="<?= $PD['post_id'] ?>"></i>
                     <span class="ml-2 action-word">Like</span>
                     <span class="ml-2 count-number like-count"><?= $PD['total_likes'] ?></span>
+
                 </div>
 
                 <div class="comment-btn">
@@ -91,13 +107,13 @@ if (isset($post_data)) :
             </hr>
 
             <div class="add-comment">
-                <img src="https://placekitten.com/50/50" alt="Profile Picture" class="rounded-circle mr-2" width="40">
-                <div class="comment-form">
-
-                    <p>What's on your mind ?</p>
+                <div id="message-input-container">
+                    <textarea id="message-input" placeholder="Type your message..."></textarea>
+                    <button id="comment-button" data-post-id="<?= $PD['post_id'] ?>">Comment</button>
                 </div>
-
             </div>
+
+
 
             <?php static $index = 0;
             $commentInfo = $comment_data[$index];
@@ -112,9 +128,11 @@ if (isset($post_data)) :
                     <div class="comment" id=<?= $commentInfo[0]['comment_id'] ?>>
                         <strong><?= $commentInfo[0]['username'] ?>: </strong><span><?= $commentInfo[0]['content'] ?></span>
                     </div>
-                    <div class="comment" id=<?= $commentInfo[0]['comment_id'] ?>>
-                        <strong><?= $commentInfo[1]['username'] ?>: </strong><span><?= $commentInfo[1]['content'] ?></span>
-                    </div>
+                    <?php if (isset($commentInfo[1])) { ?>
+                        <div class="comment" id=<?= $commentInfo[1]['comment_id'] ?>>
+                            <strong><?= $commentInfo[1]['username'] ?>: </strong><span><?= $commentInfo[1]['content'] ?></span>
+                        </div>
+                    <?php } ?>
                 </div>
 
                 <hr>
@@ -127,7 +145,8 @@ if (isset($post_data)) :
 
             <!-- <div class="add-comment">add comment</div> -->
         </div>
-        </div>
+
+
 
 <?php endforeach;
 endif; ?>

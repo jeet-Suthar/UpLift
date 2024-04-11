@@ -191,7 +191,9 @@ class UpliftController extends BaseController
 
         print_r(session()->get('email'));
         session()->destroy();
-        echo 'You have been logged out!!';
+        return redirect()->to(base_url('uplift'));
+
+        // echo 'You have been logged out!!';
     }
 
     public function getUserIdOfOwner()
@@ -322,5 +324,14 @@ class UpliftController extends BaseController
 
 
         // print_r($results);
+    }
+
+    public function help_support()
+    {
+        echo view('components/site_essentials/helpSupport');
+    }
+    public function setting()
+    {
+        echo view('components/site_essentials/setting');
     }
 }

@@ -48,7 +48,6 @@
       <p class="settings">Settings</p>
       <hr>
       <p class="help">Help & Support</p>
-      <p class="feedback">Feedback</p>
     </div>
   </div>
 </nav>
